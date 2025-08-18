@@ -5,12 +5,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#25A395",
+        primary: "#0071BC",
+        secondary: '#FFCC00',
+        'light-blue':'#E9F4FA',
         greyText: "#D1D1D1",
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        instrument: ["'Instrument Sans'", "sans-serif"],
       },
+       screens: {
+        xl1: '1440px'
+      }
     },
   },
   plugins: [],
