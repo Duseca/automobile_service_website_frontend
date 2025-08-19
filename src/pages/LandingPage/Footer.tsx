@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YoutubeIcon } from "../../components/Icons"
-
+import Logo from '../../assets/Logo.svg';
 const Footer = () => {
   return (
     <footer className="bg-primary text-white ">
@@ -9,7 +9,7 @@ const Footer = () => {
     
         <div className="flex items-center mb-4 md:mb-0">
           <div className="mr-2">
-           {/* <img src={Logo} /> */}
+           <img src={Logo} className="w-40 h-10" />
           </div>
         
         </div>

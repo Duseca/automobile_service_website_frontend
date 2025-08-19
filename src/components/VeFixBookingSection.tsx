@@ -19,6 +19,12 @@ const slides = [
 
   return (
     <div className="w-full h-full max-w-screen-xl1 mx-auto p-4 md:px-8 lg:px-8 xl1:px-[80px] md:py-20">
+       <div className="text-center mb-16">
+      <h1 className="text-4xl font-bold text-black ">
+        You fix the vehicles,
+      </h1>
+     <h1 className="text-4xl font-bold text-black"> We fix the hassle</h1>
+    </div>
 <div className="relative bg-white rounded-3xl overflow-hidden h-[400px] sm:h-[450px] lg:h-[600px]">
    
       <div className="absolute inset-0 z-0">
