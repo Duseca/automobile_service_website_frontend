@@ -1,6 +1,7 @@
 
 import YellowButton from "./YellowButton";
 import logoImage from '../assets/Logo.svg';
+import { Link, useNavigate } from "react-router";
 interface HeroProps {
   bgImage:string;
   title:string;
@@ -8,7 +9,7 @@ interface HeroProps {
   titleTwo:string | any ;
 }
 const Hero:React.FC<HeroProps> = ({bgImage, subtitle, titleTwo, title}) => {
-
+const navigate = useNavigate()
 return (
   <div className="relative w-full overflow-hidden">
     <div className="absolute inset-0 z-0">
@@ -35,10 +36,10 @@ return (
         <p className="mt-6 text-lg text-white max-w-lg">{subtitle}</p>
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <YellowButton wFull={false} text="Create account" />
-          <div className="flex items-center">
+          <YellowButton wFull={false} text="Create account" handleClick={()=>navigate('/signup')} />
+          <Link to="/login" className="flex items-center">
             <p className="text-white">Login</p>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="hidden md:block w-full md:w-1/2"></div>

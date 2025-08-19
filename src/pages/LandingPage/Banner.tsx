@@ -3,7 +3,7 @@ import bannerImage from '../../assets/bannerImg.svg';
 const Banner = () => {
   return (
       <div 
-  className="w-full  text-white p-14 flex items-center "
+  className="w-full  text-white p-4 md:p-14 flex items-center "
     style={{ backgroundImage:`url(${bannerImage})`,  backgroundSize: 'cover', backgroundPosition: 'center' }}
 >
   <div className="flex items-center max-w-6xl mx-auto gap-12">

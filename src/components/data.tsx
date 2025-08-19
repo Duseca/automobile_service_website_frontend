@@ -1,6 +1,10 @@
 import BlackButton from "./BlackButton";
 import bannerImage from '../assets/bannerImg.svg';
 import serviceBannerImage from '../assets/serviceList.svg';
+import verifiedProvider from  '../assets/verified-provider.svg';
+import securePayments from '../assets/secure-payments.svg';
+import dedicatedSupport from '../assets/dedicated-support.svg';
+import realReviews from '../assets/real-reviews.svg';
 export const faqs = [
   {
     id: "faq1",
@@ -102,3 +106,73 @@ export const serviceListCardData = [
 
   },
 ];
+
+export const reviews = [
+  "Verified Customers Only",
+  "Real Experiences, Honest Feedback",
+  "Helpful for Future Customers",
+  "Hold Onto Clients With A Friendly Vibe",
+  "Leaving A Review Is Quick And Simple",
+];
+export const supportData = [
+  {
+    title: "Verified Providers",
+    description: "Only verified businesses can list products.",
+    image : verifiedProvider, 
+  },
+  {
+    title: "Real Reviews",
+    description: "Genuine feedback from real customers—no fake ratings.",
+    image : realReviews, 
+  
+  },
+  {
+    title: "Secure Payments",
+    description: "Your payments are safe, encrypted, and hassle-free.",
+    image : securePayments, 
+  },
+  {
+    title: "Dedicated Support",
+    description: "We're here to help with your booking details.",
+   image : dedicatedSupport,
+
+  },
+];
+export const howItWorks = [
+    {
+      title: "Choose a Role",
+      description: "Personal Account or Business Account.",
+      icon: () => <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27 3H9C6.51 3 4.5 4.995 4.5 7.455V23.82C4.5 26.28 6.51 28.29 9 28.29H10.14C11.325 28.29 12.48 28.755 13.32 29.595L15.885 32.13C17.055 33.285 18.945 33.285 20.115 32.13L22.68 29.595C23.52 28.755 24.675 28.29 25.86 28.29H27C29.49 28.29 31.5 26.28 31.5 23.82V7.455C31.5 4.995 29.49 3 27 3ZM18 8.325C19.62 8.325 20.925 9.645 20.925 11.25C20.925 12.84 19.665 14.115 18.105 14.175C18.045 14.175 17.955 14.175 17.88 14.175C16.305 14.115 15.06 12.84 15.06 11.25C15.075 9.645 16.38 8.325 18 8.325ZM22.125 22.035C19.86 23.55 16.14 23.55 13.875 22.035C11.88 20.715 11.88 18.525 13.875 17.19C16.155 15.675 19.875 15.675 22.125 17.19C24.12 18.525 24.12 20.7 22.125 22.035Z" fill="#FEFEFE"/>
+</svg>
+,
+      image: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg"
+    },
+    {
+      title: "Add Your Vehicle or Listing",
+      description: "Get Started.",
+      icon: () =><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27 3H9C6.51 3 4.5 4.995 4.5 7.455V23.82C4.5 26.28 6.51 28.29 9 28.29H10.14C11.325 28.29 12.48 28.755 13.32 29.595L15.885 32.13C17.055 33.285 18.945 33.285 20.115 32.13L22.68 29.595C23.52 28.755 24.675 28.29 25.86 28.29H27C29.49 28.29 31.5 26.28 31.5 23.82V7.455C31.5 4.995 29.49 3 27 3ZM18 8.325C19.62 8.325 20.925 9.645 20.925 11.25C20.925 12.84 19.665 14.115 18.105 14.175C18.045 14.175 17.955 14.175 17.88 14.175C16.305 14.115 15.06 12.84 15.06 11.25C15.075 9.645 16.38 8.325 18 8.325ZM22.125 22.035C19.86 23.55 16.14 23.55 13.875 22.035C11.88 20.715 11.88 18.525 13.875 17.19C16.155 15.675 19.875 15.675 22.125 17.19C24.12 18.525 24.12 20.7 22.125 22.035Z" fill="#FEFEFE"/>
+</svg>
+,
+      image: "https://images.pexels.com/photos/4489730/pexels-photo-4489730.jpeg"
+    },
+    {
+      title: "Browse, Buy & Book",
+      description: "Simple, clear, and instant.",
+      icon: () => <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27 3H9C6.51 3 4.5 4.995 4.5 7.455V23.82C4.5 26.28 6.51 28.29 9 28.29H10.14C11.325 28.29 12.48 28.755 13.32 29.595L15.885 32.13C17.055 33.285 18.945 33.285 20.115 32.13L22.68 29.595C23.52 28.755 24.675 28.29 25.86 28.29H27C29.49 28.29 31.5 26.28 31.5 23.82V7.455C31.5 4.995 29.49 3 27 3ZM18 8.325C19.62 8.325 20.925 9.645 20.925 11.25C20.925 12.84 19.665 14.115 18.105 14.175C18.045 14.175 17.955 14.175 17.88 14.175C16.305 14.115 15.06 12.84 15.06 11.25C15.075 9.645 16.38 8.325 18 8.325ZM22.125 22.035C19.86 23.55 16.14 23.55 13.875 22.035C11.88 20.715 11.88 18.525 13.875 17.19C16.155 15.675 19.875 15.675 22.125 17.19C24.12 18.525 24.12 20.7 22.125 22.035Z" fill="#FEFEFE"/>
+</svg>
+,
+      image: "https://images.pexels.com/photos/97075/pexels-photo-97075.jpeg"
+    },
+      {
+      title: "Done & Dusted",
+      description: "Sit back, we’ll handle the rest.",
+      icon: () => <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27 3H9C6.51 3 4.5 4.995 4.5 7.455V23.82C4.5 26.28 6.51 28.29 9 28.29H10.14C11.325 28.29 12.48 28.755 13.32 29.595L15.885 32.13C17.055 33.285 18.945 33.285 20.115 32.13L22.68 29.595C23.52 28.755 24.675 28.29 25.86 28.29H27C29.49 28.29 31.5 26.28 31.5 23.82V7.455C31.5 4.995 29.49 3 27 3ZM18 8.325C19.62 8.325 20.925 9.645 20.925 11.25C20.925 12.84 19.665 14.115 18.105 14.175C18.045 14.175 17.955 14.175 17.88 14.175C16.305 14.115 15.06 12.84 15.06 11.25C15.075 9.645 16.38 8.325 18 8.325ZM22.125 22.035C19.86 23.55 16.14 23.55 13.875 22.035C11.88 20.715 11.88 18.525 13.875 17.19C16.155 15.675 19.875 15.675 22.125 17.19C24.12 18.525 24.12 20.7 22.125 22.035Z" fill="#FEFEFE"/>
+</svg>
+,
+      image: "https://images.pexels.com/photos/97075/pexels-photo-97075.jpeg"
+    },
+  ];

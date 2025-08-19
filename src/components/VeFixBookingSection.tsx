@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 const VeFixBookingSection = () => {
-  const slides = [
-    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=1200&q=80",
+const slides = [
+    "https://images.pexels.com/photos/2014773/pexels-photo-2014773.jpeg",
+    "https://images.pexels.com/photos/2014773/pexels-photo-2014773.jpeg",
+    "https://images.pexels.com/photos/2014773/pexels-photo-2014773.jpeg",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -18,44 +18,9 @@ const VeFixBookingSection = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-      {/* Content Section above slider */}
-      <div className="relative z-10 p-8 sm:p-12 lg:p-16 bg-white/90 backdrop-blur-sm">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-            24/7 online booking
-          </h2>
-
-          <div className="space-y-6 text-gray-700">
-            <p className="text-base sm:text-lg leading-relaxed">
-              With VeFix, customers can easily view your availability,
-              schedule appointments, and manage their bookings 24/7 — right from
-              the VeFix Web.
-            </p>
-            <p className="text-base sm:text-lg leading-relaxed">
-              Set your booking preferences, share your link, and let us handle
-              the rest while you focus on what you do best.
-            </p>
-          </div>
-
-          {/* Features */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              ["Easy scheduling", "bg-blue-500"],
-              ["24/7 availability", "bg-green-500"],
-              ["Auto rebooking", "bg-purple-500"],
-              ["Client management", "bg-orange-500"],
-            ].map(([text, color], i) => (
-              <div key={i} className="flex items-center space-x-3">
-                <div className={`w-2 h-2 ${color} rounded-full`}></div>
-                <span className="text-sm text-gray-600">{text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Slider Background */}
+    <div className="w-full h-full max-w-screen-xl1 mx-auto p-4 md:px-8 lg:px-8 xl1:px-[80px] md:py-20">
+<div className="relative bg-white rounded-3xl overflow-hidden h-[400px] sm:h-[450px] lg:h-[600px]">
+   
       <div className="absolute inset-0 z-0">
         {slides.map((img, index) => (
           <div
@@ -69,7 +34,7 @@ const VeFixBookingSection = () => {
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            {/* Overlay for readability */}
+            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
         ))}
@@ -79,30 +44,53 @@ const VeFixBookingSection = () => {
           onClick={() =>
             setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
           }
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/70 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition z-20"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/70 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition z-20"
         >
           ‹
         </button>
         <button
           onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/70 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition z-20"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/70 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition z-20"
         >
           ›
         </button>
 
         {/* Dots */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+        <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-1.5 sm:space-x-2 z-20">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full ${
+              className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full ${
                 current === i ? "bg-white" : "bg-white/40"
               }`}
             ></button>
           ))}
         </div>
       </div>
+
+      <div className="absolute inset-x-0 bottom-0 lg:inset-y-0 lg:right-20 lg:left-auto z-10 flex items-center justify-end">
+        <div className="w-full lg:w-[40%] xl:w-[50%] p-6 sm:p-10 lg:p-12 bg-white/90 backdrop-blur-sm rounded-3xl ">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+            24/7 online booking
+          </h2>
+
+          <div className="space-y-3 sm:space-y-4 text-black">
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+              With VeFix, customers can easily view your availability, schedule
+              appointments, and manage their bookings 24/7 — right from the
+              VeFix Web.
+            </p>
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+              Set your booking preferences, share your link, and let us handle
+              the rest while you focus on what you do best.
+            </p>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

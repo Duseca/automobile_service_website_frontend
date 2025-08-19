@@ -8,6 +8,9 @@ import BeSeen from './BeSeen';
 import Banner from './Banner';
 import ServicePlatform from './ServicePlatform';
 import VeFixBookingSection from '../../components/VeFixBookingSection';
+import Reviews from './Reviews';
+import SupportSection from './SupportSection';
+import HowItWorks from './HowItWorks';
 const LandingPage = () => {
   return (
     <div>
@@ -19,8 +22,11 @@ const LandingPage = () => {
           <div >
           <BeSeen />
           <ServicePlatform />
+           <Banner />
           <VeFixBookingSection />
-          <Banner />
+          <HowItWorks />
+         <Reviews />
+         <SupportSection />
           </div>
           <FAQ />
           <GetStarted />
