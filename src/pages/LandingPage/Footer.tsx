@@ -13,7 +13,13 @@ const Footer = () => {
           </div>
         
         </div>
-
+<div className="flex space-x-6">
+            <Link to="/">Home</Link>
+           <Link to="/about-us">About</Link>
+            <Link to="/contact-us">Contact</Link>
+            <Link to="">Terms & Conditions</Link>
+             <Link to="">Privacy Policy</Link>
+          </div>
       <div className="flex space-x-4">
   <Link to={""} className="hover:text-primary" aria-label="Facebook">
     <div className="rounded-md bg-gray-300/10 p-3 transition">
@@ -44,10 +50,7 @@ const Footer = () => {
           <div className="mb-2 md:mb-0">
             Copyrights © 2025 
           </div>
-          <div className="flex space-x-6">
-            <Link to="">Terms and Conditions</Link>
-           <Link to="">Privacy Policy</Link>
-          </div>
+          
         </div>
         </div>
       </div>

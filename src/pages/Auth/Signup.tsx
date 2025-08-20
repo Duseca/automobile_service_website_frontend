@@ -61,7 +61,7 @@ const [formData, setFormData] = useState({
           <form className="space-y-4" onSubmit={handleSubmit}>
             {/* User Type */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">User Type</label>
+              <label className="block text-sm font-semibold text-black mb-2">User Type</label>
               <div className="grid grid-cols-2 gap-2">
                 {['Personal Account', 'Business Account'].map((type) => (
                   <button
@@ -99,30 +99,32 @@ const [formData, setFormData] = useState({
               type="email"
             />
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Mobile Number <span className="text-red-500">*</span>
-              </label>
-              <div className="flex">
-                <div className="flex items-center px-3 py-2 border border-r-0 border-gray-300 rounded-l-lg bg-gray-50">
-                  <span className="text-red-500 font-bold text-lg">🇨🇦</span>
-                  <span className="ml-2 text-sm text-gray-600">+1</span>
-                </div>
-                <input
-                  type="tel"
-                  name="mobile"
-                  value={formData.mobile}
-                  onChange={handleInputChange}
-                  placeholder="(416) 000 234"
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  required
-                />
+                <div>
+          <label htmlFor="mobileNumber" className="block text-sm font-medium text-gray-900 mb-2">
+            Mobile Number
+          </label>
+          <div className="flex">
+            <div className="flex items-center px-3 py-3 bg-gray-50 border border-gray-300 border-r-0 rounded-l-lg">
+              <div className="w-5 h-4 bg-red-600 rounded-sm mr-2 flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
+              <span className="text-gray-700 text-sm font-medium">+41</span>
             </div>
+            <input
+              type="tel"
+              id="mobileNumber"
+              name="mobileNumber"
+              value={formData.mobile}
+              onChange={handleInputChange}
+              placeholder="576 889 324"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-r-lg focus:ring focus:ring-primary focus:border-primary outline-none transition-colors placeholder-gray-400"
+            />
+          </div>
+        </div>
 
             {/* Password */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+              <label className="block text-sm font-semibold text-black mb-1">Password</label>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
@@ -141,6 +143,14 @@ const [formData, setFormData] = useState({
                   {showPassword ? 'Hide' : 'Show'}
                 </span>
               </div>
+                <div className="flex justify-end mt-2">
+                  <Link
+                    to="/forgot-password"
+                    className="text-sm text-primary font-medium hover:underline"
+                  >
+                    Forgot password?
+                  </Link>
+                </div>
             </div>
 
             {/* Checkboxes */}
@@ -154,7 +164,7 @@ const [formData, setFormData] = useState({
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 mt-0.5"
                   required
                 />
-                <span className="text-sm text-gray-600">Accept Terms & Conditions</span>
+                <span className="text-sm text-black font-semibold">Accept Terms & Conditions</span>
               </label>
 
               <label className="flex items-start space-x-2">
@@ -165,7 +175,7 @@ const [formData, setFormData] = useState({
                   onChange={handleInputChange}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 mt-0.5"
                 />
-                <span className="text-sm text-gray-600">Get updates on promotions</span>
+                <span className="text-sm text-black font-semibold">Get updates on promotions</span>
               </label>
             </div>
 
@@ -209,12 +219,11 @@ const [formData, setFormData] = useState({
           </div>
         </div>
       </div>
-
-      {/* Modal */}
       <Modal
         show={showModal}
         title={formData.userType === 'Personal Account' ? 'Add Vehicle' : 'Add Business details'}
         onClose={() => setShowModal(false)}
+        link={formData.userType === 'Personal Account' ? "/vehicle-detail" :"/add-busniess-detail"}
       />
     </div>
   )

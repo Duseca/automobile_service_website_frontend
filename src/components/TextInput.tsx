@@ -21,7 +21,7 @@ const TextInput: React.FC<TextInputProps> = ({
 }) => {
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label className="block text-sm font-semibold text-black mb-1">
         {label}
       </label>
       <input

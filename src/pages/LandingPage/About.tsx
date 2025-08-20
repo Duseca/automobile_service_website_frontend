@@ -1,21 +1,20 @@
-
 import Hero from '../../components/Hero'
 import FAQ from './FAQ'
 import Footer from './Footer'
 import GetStarted from './GetStarted'
 import bgImage from '../../assets/bgImage.svg';
-import BeSeen from './BeSeen';
 import Banner from './Banner';
-import ServicePlatform from './ServicePlatform';
 import VeFixBookingSection from '../../components/VeFixBookingSection';
 import Reviews from './Reviews';
 import SupportSection from './SupportSection';
 import HowItWorks from './HowItWorks';
 import { useEffect } from 'react';
-const LandingPage = () => {
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+import Simplicity from './Simplicity';
+import FeauturesAbout from './FeauturesAbout';
+const About = () => {
+      useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Hero bgImage={bgImage}
@@ -24,8 +23,8 @@ const LandingPage = () => {
         titleTwo={""}
           title={"Auto Care Made Easy for Everyone"} />
           <div >
-          <BeSeen />
-          <ServicePlatform />
+        <Simplicity />
+        <FeauturesAbout />
            <Banner />
           <VeFixBookingSection />
           <HowItWorks />
@@ -39,4 +38,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default About
