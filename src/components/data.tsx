@@ -262,3 +262,75 @@ export const featuresAbout =  [
 
     }
   ];
+   export const productCategories = [
+      {
+        id: 'service-parts',
+        name: 'Service Parts',
+        image: 'https://images.pexels.com/photos/459740/pexels-photo-459740.jpeg'
+      },
+      {
+        id: 'brakes',
+        name: 'Brakes',
+        image: 'https://images.pexels.com/photos/33476000/pexels-photo-33476000.jpeg'
+      },
+      {
+        id: 'engine',
+        name: 'Engine',
+        image: 'https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg'
+      },
+      {
+        id: 'suspension',
+        name: 'Suspension',
+        image: 'https://images.pexels.com/photos/33476000/pexels-photo-33476000.jpeg'
+      },
+      {
+        id: 'transmission',
+        name: 'Transmission',
+        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+      },
+      {
+        id: 'electrical',
+        name: 'Electrical',
+        image: 'https://images.pexels.com/photos/159293/car-engine-motor-clean-customized-159293.jpeg'
+      },
+      {
+        id: 'lighting',
+        name: 'Lighting',
+        image: 'https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg'
+      },
+      {
+        id: 'security',
+        name: 'Security',
+        image: 'https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg'
+      },
+      {
+        id: 'exhaust',
+        name: 'Exhaust',
+        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+      },
+      {
+        id: 'cooling',
+        name: 'Cooling',
+        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+      },
+       {
+        id: 'cooling-I',
+        name: 'Cooling',
+        image: 'https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg'
+      }
+      , {
+        id: 'cooling-II',
+        name: 'Cooling',
+        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+      }
+      , {
+        id: 'cooling-III',
+        name: 'Cooling',
+        image: 'https://images.pexels.com/photos/159293/car-engine-motor-clean-customized-159293.jpeg'
+      }
+      , {
+        id: 'cooling-IV',
+        name: 'Cooling',
+        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+      } 
+    ];
