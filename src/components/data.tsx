@@ -266,52 +266,52 @@ export const featuresAbout =  [
       {
         id: 'service-parts',
         name: 'Service Parts',
-        image: 'https://images.pexels.com/photos/459740/pexels-photo-459740.jpeg'
+        image: 'https://plus.unsplash.com/premium_photo-1661501041641-3e731115e687?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'brakes',
         name: 'Brakes',
-        image: 'https://images.pexels.com/photos/33476000/pexels-photo-33476000.jpeg'
+        image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'engine',
         name: 'Engine',
-        image: 'https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg'
+        image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'suspension',
         name: 'Suspension',
-        image: 'https://images.pexels.com/photos/33476000/pexels-photo-33476000.jpeg'
+        image: 'https://plus.unsplash.com/premium_photo-1661501041641-3e731115e687?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'transmission',
         name: 'Transmission',
-        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+        image: 'https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'electrical',
         name: 'Electrical',
-        image: 'https://images.pexels.com/photos/159293/car-engine-motor-clean-customized-159293.jpeg'
+        image: 'https://images.unsplash.com/photo-1641494639075-5571f7ef486b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'lighting',
         name: 'Lighting',
-        image: 'https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg'
+        image: 'https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'security',
         name: 'Security',
-        image: 'https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg'
+        image: 'https://images.unsplash.com/photo-1605164598708-25701594473e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'exhaust',
         name: 'Exhaust',
-        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+        image: 'https://images.unsplash.com/photo-1641494639075-5571f7ef486b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
       {
         id: 'cooling',
         name: 'Cooling',
-        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+        image: 'https://images.unsplash.com/photo-1605164598708-25701594473e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       },
        {
         id: 'cooling-I',
@@ -321,7 +321,7 @@ export const featuresAbout =  [
       , {
         id: 'cooling-II',
         name: 'Cooling',
-        image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
+        image: 'https://plus.unsplash.com/premium_photo-1661454209648-4764099a9be9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       }
       , {
         id: 'cooling-III',
@@ -334,3 +334,135 @@ export const featuresAbout =  [
         image: 'https://images.pexels.com/photos/1835897/pexels-photo-1835897.jpeg'
       } 
     ];
+     export const relatedProducts = [
+    {
+      id: "1",
+      category: "Air Filters",
+      name: "EcoBoost Air Filter",
+      vendor: "Speedy Wheels Garage",
+      vendorLogo: "🚗",
+      price: 23.0,
+      rating: 4.8,
+      reviewCount: 121,
+      image: "https://images.unsplash.com/photo-1604492642440-063264f0b74e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: "2",
+      category: "Air Filters",
+      name: "Duracell Car Battery",
+      vendor: "VoltAuto Supplies",
+      vendorLogo: "🔋",
+      price: 120.0,
+      rating: 4.5,
+      reviewCount: 95,
+      image: "https://images.unsplash.com/photo-1604492642440-063264f0b74e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: "3",
+      category: "Air Filters",
+      name: "Bosch Spark Plug",
+      vendor: "AutoKing Supplies",
+      vendorLogo: "⚡",
+      price: 12.5,
+      rating: 4.7,
+      reviewCount: 200,
+      image: "https://images.unsplash.com/photo-1604492642440-063264f0b74e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+   
+   
+  ];
+ export  const suggestedProducts = [
+    {
+      id: 1,
+      name: 'Smell Fresh',
+      description: 'Air Filters + Air Freshener',
+      price: '$21.00',
+      image: 'https://images.unsplash.com/photo-1604492642440-063264f0b74e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    },
+    {
+      id: 2,
+      name: 'Protect & Wash',
+      description: 'Air Filter + Paint',
+      price: '$28.59',
+      image: 'https://images.unsplash.com/photo-1604492642440-063264f0b74e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      isSelected: true
+    },
+    {
+      id: 3,
+      name: 'Car Care & Fun',
+      description: 'Air Filter + Brake Pads',
+      price: '$36.00',
+      image: 'https://images.unsplash.com/photo-1604492642440-063264f0b74e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    }
+  ];
+   export const relatedServices= [
+    {
+      id: "11",
+      category: "Car Wash",
+      name: "Basic Car Wash",
+      vendor: "Shiny Motors",
+      vendorLogo: "🚿",
+      price: 30.0,
+      rating: 4.6,
+      reviewCount: 180,
+      image: "https://images.unsplash.com/photo-1627828982773-42814bc7e22e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: "12",
+      category: "Car Wash",
+      name: "Interior Detailing",
+      vendor: "Crystal Auto Spa",
+      vendorLogo: "✨",
+      price: 75.0,
+      rating: 4.9,
+      reviewCount: 240,
+      image: "https://images.unsplash.com/photo-1681356854285-17645401bf47?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: "13",
+      category: "Car Wash",
+      name: "Full Engine Checkup",
+      vendor: "Prime Auto Care",
+      vendorLogo: "🔧",
+      price: 150.0,
+      rating: 4.8,
+      reviewCount: 300,
+      image: "https://images.unsplash.com/photo-1627828982773-42814bc7e22e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: "14",
+      category: "Car Wash",
+      name: "Brake Pad Replacement",
+      vendor: "SafeDrive Repairs",
+      vendorLogo: "🛠️",
+      price: 110.0,
+      rating: 4.7,
+      reviewCount: 170,
+      image: "https://images.unsplash.com/photo-1681356854285-17645401bf47?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+     {
+      id: "15",
+      category: "Car Wash",
+      name: "Brake Pad Replacement",
+      vendor: "SafeDrive Repairs",
+      vendorLogo: "🛠️",
+      price: 110.0,
+      rating: 4.7,
+      reviewCount: 170,
+      image: "https://plus.unsplash.com/premium_photo-1673214881634-75644d01f266?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+  export const orderItems = [ {
+      id: 1,
+      name: 'Bosch Engine',
+      price: 18.50,
+      quantity: 2,
+      image: 'https://images.unsplash.com/photo-1575844611093-ed16474b4f44?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    },
+    {
+      id: 2,
+      name: 'Mann Filter',
+      price: 19.75,
+      quantity: 3,
+      image: 'https://images.unsplash.com/photo-1575844611093-ed16474b4f44?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    }]

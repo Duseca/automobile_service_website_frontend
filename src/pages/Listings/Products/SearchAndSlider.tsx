@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { BackArrowIcon, SearchIcon } from '../../components/Icons';
-import { productCategories } from '../../components/data';
+import { BackArrowIcon, NextArrowIcon, SearchIcon } from '../../../components/Icons';
+import { productCategories } from '../../../components/data';
 const SearchAndSlider = () => {
      const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('service-parts');
@@ -53,7 +53,7 @@ const SearchAndSlider = () => {
             className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-lg border border-gray-200 p-2 hover:bg-gray-50 transition-colors"
             style={{ marginLeft: '-16px' }}
           >
-           <BackArrowIcon />
+           <NextArrowIcon />
           </button>
           <div
             id="categories-container"

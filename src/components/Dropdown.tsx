@@ -7,7 +7,7 @@ interface DropdownProps {
 }
 const Dropdown = ({ label, name, value, options, onChange }: DropdownProps) => {
   return (
-     <div className="mb-4">
+     <div >
       <label className="block text-sm font-semibold text-black mb-2">
         {label}
       </label>

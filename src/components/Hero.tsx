@@ -17,6 +17,7 @@ return (
         src={bgImage}
         alt="vefix"
         className="w-full h-full object-cover"
+        loading="eager" 
       />
     </div>
     <div className="relative z-10 max-w-screen-xl1 mx-auto p-4 md:px-8 lg:px-8 xl1:px-[80px] py-12 md:py-20 flex flex-col md:flex-row items-center">

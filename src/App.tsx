@@ -15,7 +15,11 @@ import SelectInstallationCategory from './pages/BusniessDetails/SelectInstallati
 import AllowAccess from './pages/BusniessDetails/AllowAccess'
 import About from './pages/LandingPage/About'
 import Contact from './pages/LandingPage/Contact'
-import ProductHome from './pages/Products/ProductHome'
+import ProductHome from './pages/Listings/Products/ProductHome'
+import ServicesHome from './pages/Listings/Services/ServicesHome'
+import ProductDetail from './pages/Listings/Products/ProductDetail'
+import ServiceDetail from './pages/Listings/Services/ServiceDetail'
+import OrderHome from './pages/Order/OrderHome'
 function App() {
   return (
     <>
@@ -35,6 +39,10 @@ function App() {
 <Route path="/add-busniess-installation-category" element={<SelectInstallationCategory />}/>
 <Route path="/allow-access" element={<AllowAccess />}/>
 <Route path="/product-home" element={<ProductHome />}/>
+<Route path="/product-detail/:id" element={<ProductDetail />}/>
+<Route path="/service-home" element={<ServicesHome />}/>
+<Route path="/service-detail/:id" element={<ServiceDetail />}/>
+<Route path="/order" element={<OrderHome />}/>
     </Routes>
     </>
   )

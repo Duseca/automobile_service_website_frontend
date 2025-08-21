@@ -163,3 +163,34 @@ export const BackArrowIcon = () =>{
 </svg>
 )
 }
+export const NextArrowIcon = () =>{
+  return(<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.9998 19.9201L8.47984 13.4001C7.70984 12.6301 7.70984 11.3701 8.47984 10.6001L14.9998 4.08008" stroke="#83898F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
+}
+export const IncrementIcon = () =>{
+return(<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 14.5H21" stroke="#061420" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 21.5V7.5" stroke="#061420" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
+}
+export const DecrementIcon = () =>{
+  return(<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 14.5H21" stroke="#061420" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
+}
+export const TickIcon = () =>{
+  return(<svg width="20" height="15" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 2.5H8C4 2.5 2 4.5 2 8.5V21.5C2 22.05 2.45 22.5 3 22.5H16C20 22.5 22 20.5 22 16.5V8.5C22 4.5 20 2.5 16 2.5ZM14 15.75H7C6.59 15.75 6.25 15.41 6.25 15C6.25 14.59 6.59 14.25 7 14.25H14C14.41 14.25 14.75 14.59 14.75 15C14.75 15.41 14.41 15.75 14 15.75ZM17 10.75H7C6.59 10.75 6.25 10.41 6.25 10C6.25 9.59 6.59 9.25 7 9.25H17C17.41 9.25 17.75 9.59 17.75 10C17.75 10.41 17.41 10.75 17 10.75Z" fill="#0071BC"/>
+</svg>
+)
+}
+export const HeartIcon = () =>{
+  return(<svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.9203 4.1333C19.507 4.1333 17.347 5.30663 16.0003 7.10663C14.6537 5.30663 12.4937 4.1333 10.0803 4.1333C5.98699 4.1333 2.66699 7.46663 2.66699 11.5866C2.66699 13.1733 2.92033 14.64 3.36033 16C5.46699 22.6666 11.9603 26.6533 15.1737 27.7466C15.627 27.9066 16.3737 27.9066 16.827 27.7466C20.0403 26.6533 26.5337 22.6666 28.6403 16C29.0803 14.64 29.3337 13.1733 29.3337 11.5866C29.3337 7.46663 26.0137 4.1333 21.9203 4.1333Z" fill="#FF3B30"/>
+</svg>
+)
+}
