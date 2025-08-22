@@ -20,6 +20,9 @@ import ServicesHome from './pages/Listings/Services/ServicesHome'
 import ProductDetail from './pages/Listings/Products/ProductDetail'
 import ServiceDetail from './pages/Listings/Services/ServiceDetail'
 import OrderHome from './pages/Order/OrderHome'
+import ServiceOrder from './pages/ServiceOrder/ServiceOrder'
+import StoreOwnerProfile from './pages/Profile/StoreOwnerProfile'
+import Chat from './pages/Chat/Chat'
 function App() {
   return (
     <>
@@ -43,6 +46,9 @@ function App() {
 <Route path="/service-home" element={<ServicesHome />}/>
 <Route path="/service-detail/:id" element={<ServiceDetail />}/>
 <Route path="/order" element={<OrderHome />}/>
+<Route path="/service-order" element={<ServiceOrder />}/>
+<Route path="/profile" element={<StoreOwnerProfile />}/>
+<Route path="/chat" element={<Chat />}/>
     </Routes>
     </>
   )

@@ -4,7 +4,7 @@ import RelatedProducts from './RelatedProducts';
 import { suggestedProducts } from './data';
 import { Link } from 'react-router';
  
-const ProductCard = () => {
+const ProductCard = ({type} : {type : String}) => {
  const productImages = [
     "https://images.unsplash.com/photo-1608259243654-70c070e0f6ed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1708805283017-c662be2c7a44?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -114,7 +114,7 @@ const ProductCard = () => {
             </div>
 
             <Link 
-            to={'/order'}
+            to={type=='product' ? '/order' : '/service-order'}
             className="flex-1 sm:flex-none bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-lg">
               Add to cart
             </Link>

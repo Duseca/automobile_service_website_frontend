@@ -3,7 +3,7 @@ import TextInput from "../../components/TextInput";
 import YellowButton from "../../components/YellowButton";
 
 
-const PaymentInfo = () => {
+const PaymentInfo = ({ nextStep }: { nextStep: () => void }) => {
      const [formData, setFormData] = useState({
     cardholderName: '',
     cardNumber: '1234 5678 9012 3456',
@@ -49,7 +49,6 @@ const PaymentInfo = () => {
             <input
               id="expiryDate"
               type="time"
-              value={formData.expiryDate}
               placeholder="MM / YY"
               className="w-full px-3 py-2 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-900"
             />
@@ -71,7 +70,6 @@ const PaymentInfo = () => {
             <input
               id="cardNumber"
               type="text"
-              value={formData.cardNumber}
               placeholder="1234 5678 9012 3456"
               className="w-full px-3 py-2 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-900"
             />
@@ -96,7 +94,6 @@ const PaymentInfo = () => {
           <input
             id="cvv"
             type="text"
-            value={formData.cvv}
             placeholder="3-digit code"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-900"
           />
@@ -105,7 +102,7 @@ const PaymentInfo = () => {
     </div>
   </div>
   <div className="my-20">
-  <YellowButton text="Proceed to next step" wFull={true} />
+  <YellowButton text="Proceed to next step" wFull={true} handleClick={nextStep} />
   </div>
 </div>
 

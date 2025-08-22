@@ -466,3 +466,69 @@ export const featuresAbout =  [
       quantity: 3,
       image: 'https://images.unsplash.com/photo-1575844611093-ed16474b4f44?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     }]
+
+  export const deliveryData = [
+  {
+    label: "Full Address",
+    value: "123 Main Street, Southwale, Los Angeles, 22118",
+  },
+  {
+    label: "City",
+    value: "Los Angeles",
+  },
+  {
+    label: "Postal Code",
+    value: "5454",
+  },
+  {
+    label: "Country",
+    value: "USA",
+  },
+  {
+    label: "Delivery Instructions",
+    value: "Leave package at the front door.",
+  },
+];
+
+export const vehicleDeliveryData = [
+  {
+    label: "Make",
+    value: "Toyota",
+  },
+  {
+    label: "Model",
+    value: "Corolla",
+  },
+  {
+    label: "Year",
+    value: "2022",
+  },
+  {
+    label: "Engine Size",
+    value: "1.8L",
+  },
+  {
+    label: "Fuel Type",
+    value: "Petrol",
+  },
+  {
+    label: "Transmission",
+    value: "Automatic",
+  },
+  {
+    label: "Color",
+    value: "White",
+  },
+  {
+    label: "VIN",
+    value: "1HGCM82633A123456",
+  },
+  {
+    label: "Registration Number",
+    value: "ABC-1234",
+  },
+  {
+    label: "Mileage",
+    value: "15,000 km",
+  },
+];

@@ -2,9 +2,7 @@ import { orderItems } from "../../components/data"
 import { DecrementIcon, IncrementIcon } from "../../components/Icons"
 import YellowButton from "../../components/YellowButton"
 
-
-const OrderSummary = () => {
-
+const OrderSummary = ({ nextStep }: { nextStep: () => void }) => {
   return (
  <div className="min-h-screen">
   <div className="bg-white rounded-lg mb-10">
@@ -139,7 +137,7 @@ const OrderSummary = () => {
 </div>
 
   </div>
-  <YellowButton text="Proceed to Next" wFull={true} />
+  <YellowButton text="Proceed to Next" wFull={true} handleClick={()=>nextStep()} />
 </div>
 
   )

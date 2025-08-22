@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TextInput from "../../components/TextInput";
 import Dropdown from "../../components/Dropdown";
+import YellowButton from "../../components/YellowButton";
 
 interface DeliveryInfoData {
   recipientName: string;
@@ -11,7 +12,7 @@ interface DeliveryInfoData {
   recipientCountry:string;
 }
 
-const DeliveryInfo = () => {
+const DeliveryInfo = ({ nextStep }: { nextStep: () => void }) => {
      const [formData, setFormData] = useState<DeliveryInfoData>({
     recipientName: "",
     recipientEmail: "",
@@ -105,6 +106,9 @@ const DeliveryInfo = () => {
       }
     />
   </div>
+  <div className="my-12">
+  <YellowButton text="Proceed to Next" wFull={true} handleClick={()=>nextStep()} />
+    </div>
 </>
 
   )
