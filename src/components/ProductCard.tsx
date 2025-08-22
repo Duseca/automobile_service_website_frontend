@@ -92,9 +92,7 @@ const ProductCard = ({type} : {type : String}) => {
               better fuel efficiency.
             </p>
           </div>
-
-          {/* Quantity + Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center my-4">
+{type==='product' ? <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center my-4">
             <div className="flex items-center border border-gray-200 rounded-lg bg-gray-100">
               <button
                 onClick={() => handleQuantityChange(-1)}
@@ -122,7 +120,19 @@ const ProductCard = ({type} : {type : String}) => {
             <button className="bg-blue-100 text-blue-600 font-semibold py-2 px-5 rounded-lg">
               Find an installer
             </button>
-          </div>
+          </div> : <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center my-4">
+            <Link 
+            to={type=='product' ? '/order' : '/service-order'}
+            className="flex-1 sm:flex-none bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-lg">
+              Book Now
+            </Link>
+            <Link to={'/profile'}>
+            <button className="bg-blue-100 cursor-pointer text-blue-600 font-semibold py-2 px-5 rounded-lg">
+             Contact Store
+            </button>
+            </Link>
+          </div>}
+          
         </div>
 
         {/* Extra Options */}

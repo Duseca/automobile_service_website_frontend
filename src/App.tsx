@@ -23,6 +23,9 @@ import OrderHome from './pages/Order/OrderHome'
 import ServiceOrder from './pages/ServiceOrder/ServiceOrder'
 import StoreOwnerProfile from './pages/Profile/StoreOwnerProfile'
 import Chat from './pages/Chat/Chat'
+import RootLayout from './layouts/RootLayout'
+import EditProfile from './pages/ServiceProviderDashboard/EditProfile'
+import VehicleOwnerEditProfile from './pages/VehicleOwnerDashboard/VehicleOwnerEditProfile'
 function App() {
   return (
     <>
@@ -49,6 +52,12 @@ function App() {
 <Route path="/service-order" element={<ServiceOrder />}/>
 <Route path="/profile" element={<StoreOwnerProfile />}/>
 <Route path="/chat" element={<Chat />}/>
+ <Route path="/dashboard/serviceProvider" element={<RootLayout />}>
+    <Route index element={<EditProfile />} />
+    </Route>
+ <Route path="/dashboard/vehicleOwner" element={<RootLayout />}>
+    <Route index element={<VehicleOwnerEditProfile />} />
+    </Route>
     </Routes>
     </>
   )

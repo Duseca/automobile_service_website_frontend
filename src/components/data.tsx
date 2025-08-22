@@ -532,3 +532,13 @@ export const vehicleDeliveryData = [
     value: "15,000 km",
   },
 ];
+export const sidebarLinks=[
+  {name:"Edit Profile", path:"/dashboard/vehicleOwner", icon:''},
+  {name:"Vehicles", path:"", icon:''},
+  {name:"Orders", path:"", icon:''},
+  {name:"Bookings", path:"", icon:''},
+  {name:"Change Password", path:"", icon:''},
+  {name:"Settings", path:"", icon:''},
+  {name:"Language", path:"", icon:''},
+  {name:"Logout", path:"", icon:''},
+]

@@ -68,7 +68,7 @@ const dummyUser = {
                 </span>
               </button>
 
-              <Link to="/profile">
+              <Link to="/dashboard/vehicleOwner">
                 <img
                   src={dummyUser.avatar || "https://images.pexels.com/photos/9072375/pexels-photo-9072375.jpeg"}
                   alt="User Avatar"
@@ -88,7 +88,6 @@ const dummyUser = {
           )}
         </div>
 
-        {/* Mobile menu button */}
         <button 
           className="md:hidden flex flex-col items-center justify-center w-10 h-10 space-y-1"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
