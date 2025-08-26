@@ -1,14 +1,22 @@
 
-import { Link, NavLink } from "react-router-dom";
-import Logo from '../../assets/logo.svg';
+import {  NavLink} from "react-router-dom";
 import { useState } from "react";
 import { sidebarLinks } from "../../components/data";
+import Modal from "../../components/Modal";
 
 const Sidebar = () => {
-    const [showMenu, setShowMenu] = useState(false);
+ const [showMenu, setShowMenu] = useState(false);
+  const [showLogout, setShowLogout] = useState(false);
+
+  const handleAction = (link: any) => {
+    if (link.action === "logout") {
+      setShowLogout(true); // 👈 open modal
+    } else {
+      setShowMenu(false); // close sidebar on normal link click
+    }
+  };
   return (
    <>
-      {/* Toggle Button for Mobile */}
       <div className="px-4 sm:px-8 pt-2 lg:hidden">
         <button
           onClick={() => setShowMenu(true)}
@@ -30,82 +38,84 @@ const Sidebar = () => {
         </button>
       </div>
 
-      {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 z-40 w-64 h-screen bg-white border-r transform duration-300 ease-in-out ${
+        className={`fixed  left-0 z-40 w-64 bg-white  transform duration-300 ease-in-out ${
           showMenu ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0 lg:block`}
         aria-label="Sidebar"
       >
         <div className="flex flex-col justify-between h-full px-4 py-5 overflow-y-auto scrollbar-hide">
-          {/* Close button (mobile only) */}
           <div>
             <div className="flex justify-end lg:hidden mb-4">
               <button
                 className="text-black text-2xl cursor-pointer"
                 onClick={() => setShowMenu(false)}
               >
-               close
+                close
               </button>
-            </div>
-
-            {/* Logo */}
-            <div className="flex justify-center mb-6">
-              <Link to="/">
-                <img src={Logo} alt="Kinnected Logo" className="h-20" />
-              </Link>
             </div>
 
             {/* Sidebar Links */}
             <ul className="space-y-3 text-sm">
               {sidebarLinks?.map((link) => (
                 <li key={link.name}>
-                  <SidebarLink
-                    name={link.name}
-                    path={link.path}
-                    icon={link.icon}
-                    onClick={() => setShowMenu(false)}
-                  />
+                  {link.action === "logout" ? (
+                    <button
+                      onClick={() => handleAction(link)}
+                    className="flex items-center py-2 px-5 rounded-lg cursor-pointer text-red-500 font-semibold"
+                    >
+                      {link.icon} <span className="ml-3">{link.name}</span>
+                    </button>
+                  ) : (
+                    <SidebarLink
+                      name={link.name}
+                      path={link.path}
+                      icon={link.icon}
+                      onClick={() => handleAction(link)}
+                    />
+                  )}
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Logout */}
-          <div className="mt-6">
-            <Link
-              to="/login"
-              className="flex items-center px-4 py-2 rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20"
-            >
-              <span className="ml-2">Logout</span>
-            </Link>
-          </div>
         </div>
       </aside>
+
+      {/* Logout Modal */}
+   
+      <Modal
+      bottomText={"Not now"}
+      show={showLogout}
+      title={"Yes, log me out"} 
+      modalTitle={"Ready to head out?"}
+      description="You’re about to log out of your account. Don’t worry—you can jump back in anytime!"
+      onClose={() => setShowLogout(false)}
+       />
     </>
   )
 }
 interface SidebarLinkProps{
     name : string , 
-    path : string, 
+    path?: string, 
     icon: React.ReactNode,
     onClick: ()=>void
 }
 const SidebarLink: React.FC<SidebarLinkProps> = ({ name, path, icon, onClick }) =>{
     return (
       <li onClick={onClick}>
-        <NavLink
-          to={path}
-          className={({ isActive }) =>
-            isActive
-              ? "flex items-center py-2 px-5 rounded-lg text-[#83898F] bg-red-200 font-semibold"
-              : "flex items-center py-2 px-5 text-gray-600 rounded-lg  bg-primary/10 drop-shadow hover:text-primary hover:font-medium outline-none"
-          }
-        >
-          {icon}
-          <span className="flex-1 ml-3 whitespace-nowrap">{name}</span>
-        </NavLink>
-      </li>
+      <NavLink
+      end 
+        to={path? path : '/'}
+        className={({ isActive }) =>
+          isActive
+            ? "flex items-center py-2 px-5 rounded-lg text-primary bg-primary/10 font-semibold"
+            : "flex items-center py-2 px-5 text-[#83898F] rounded-lg bg-transparent hover:text-primary"
+        }
+      >
+        <span className="text-inherit">{icon}</span>
+        <span className="flex-1 ml-3 whitespace-nowrap">{name}</span>
+      </NavLink>
+    </li>
     );
   }
 export default Sidebar

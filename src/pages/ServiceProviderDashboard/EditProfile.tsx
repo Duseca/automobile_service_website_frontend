@@ -2,7 +2,7 @@
 const EditProfile = () => {
   return (
     <div>
-      
+      helow
     </div>
   )
 }

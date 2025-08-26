@@ -5,62 +5,119 @@ import verifiedProvider from  '../assets/verified-provider.svg';
 import securePayments from '../assets/secure-payments.svg';
 import dedicatedSupport from '../assets/dedicated-support.svg';
 import realReviews from '../assets/real-reviews.svg';
+import { FaUserEdit, FaCar,  FaKey, FaCog, FaLanguage, FaSignOutAlt } from "react-icons/fa";
+import { MdLocalShipping, MdEventSeat } from "react-icons/md";
 export const faqs = [
   {
     id: "faq1",
-    type: "business",
-    question: "How do I create a business account?",
-    answer: "To create a business account, click on the 'Sign Up' button and select 'Business Account' option. You'll need to provide your business details including registration number and tax ID.",
+    type: "vendor",
+    question: "How do I join VeFix as a vendor?",
+    answer: "Click “Create Account,” choose “Business,” then complete your profile with your business info, service/product listings, pricing, and availability.",
     active: true,
   },
   {
     id: "faq2",
-    type: "business",
-    question: "What are the benefits of a business account?",
-    answer: "Business accounts offer higher transaction limits, access to business analytics, multi-user access, invoicing tools, and dedicated business support."
+    type: "vendor",
+    question: "Is there a fee to list on VeFix?",
+    answer: "Listing is free at this current moment."
   },
   {
     id: "faq3",
-    type: "business",
-    question: "Can I have multiple users on my business account?",
-    answer: "Yes, our business accounts support multiple users with different permission levels. You can add team members and set specific access rights for each user.",
+    type: "vendor",
+    question: "Can I manage my availability and pricing?",
+    answer: "Yes, you have full control over your listings — including pricing, service hours, discounts, and product stock.",
   },
   {
     id: "faq4",
-    type: "business",
-    question: "How are business account fees calculated?",
-    answer: "Business account fees are based on your transaction volume and services used. We offer tiered pricing with discounts for higher volumes. Contact our sales team for a customized quote.",
+    type: "vendor",
+    question: "How do I receive payments?",
+    answer: "Payments are processed securely through our platform and transferred to your connected bank account on a rolling basis (e.g., every 3–5 business days).",
   },
-  {
+   {
     id: "faq5",
-    type: "personal",
-    question: "What is VeFix?",
-    answer: "VeFix is a comprehensive platform that connects service providers with customers. We offer a wide range of services from home repairs to professional consultations, all in one convenient place."
+    type: "vendor",
+    question: "How do I receive payments?",
+    answer: "Payments are processed securely through our platform and transferred to your connected bank account on a rolling basis (e.g., every 3–5 business days).",
   },
-  {
+   {
     id: "faq6",
-    type: "personal",
-    question: "How do I find a specific service or product?",
-    answer: "You can search for services using our search bar, browse by category, or use our interactive map to find providers near your location. Filter options help narrow down your results."
+    type: "vendor",
+    question: "How do I receive payments?",
+    answer: "Payments are processed securely through our platform and transferred to your connected bank account on a rolling basis (e.g., every 3–5 business days).",
   },
   {
     id: "faq7",
-    type: "personal",
-    question: "How do I book a service?",
-    answer: "Once you find a service provider, select your preferred service package, choose an available time slot, and proceed to checkout. You'll receive confirmation details via email and in your account.",
+    type: "vendor",
+    question: "Can I offer both services and parts on VeFix?",
+    answer: "Absolutely. You can list car parts, accessories, and services such as repairs, MOTs, detailing, and more — all under one business profile."
   },
   {
     id: "faq8",
-    type: "personal",
-    question: "Are the service providers verified?",
-    answer: "Yes, all service providers undergo a thorough verification process including identity checks, professional certification verification, and customer review evaluation before joining our platform.",
+    type: "vendor",
+    question: "How do customer reviews work?",
+    answer: "After each transaction, customers are invited to leave a review. Maintaining high ratings will boost your visibility and attract more bookings."
   },
   {
     id: "faq9",
-    type: "personal",
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, bank transfers, and in some regions, mobile payment options. Payment methods may vary slightly by location.",
+    type: "vendor",
+    question: "Can I offer emergency services or 24/7 callouts?",
+    answer: "Yes. You can enable the “Emergency Callout” option in your settings and list your 24/7 offerings in the “Emergency Services” category.",
+  },
+  {
+    id: "faq10",
+    type: "vendor",
+    question: "Is there support if I need help managing my listings?",
+    answer: "Yes, our vendor support team is available via chat, email, or phone to assist you with listing setup, customer queries, or account management.",
+  },
+  {
+    id: "faq11",
+    type: "owner",
+    question: "What is VeFix?",
+    answer: "VeFix is a marketplace platform where you can find and book automotive services or purchase vehicle parts from trusted vendors across the UK.",
+  },
+   {
+    id: "faq12",
+    type: "owner",
+    question: "How do I find a specific service or product?",
+    answer: "Use the search bar or browse categories such as “Tyres,” “Detailing,” “Recovery Services,” or “Car Parts.” Filters help narrow down by location, price, availability, and rating.",
+  },
+   {
+    id: "faq13",
+    type: "owner",
+    question: "How do I book a service?",
+    answer: "Simply click on the listing, choose your desired date/time, and confirm the booking. You’ll receive a confirmation and reminder before your appointment.",
+  },
+   {
+    id: "faq14",
+    type: "owner",
+    question: "Are the service providers verified?",
+    answer: "Yes, all providers go through a standard verification process, including identity, business credentials, and customer reviews to maintain a safe platform.",
+  },
+  {
+    id: "faq15",
+    type: "owner",
+    question: "Can I track my orders or service appointments?",
+    answer: "Yes. Log into your dashboard to track service progress, order delivery, or request support if needed.",
+  },
+  {
+    id: "faq16",
+    type: "owner",
+    question: "What payment methods are accepted?",
+    answer: "We accept all major debit/credit cards, PayPal, and mobile payments. Some vendors may also accept cash on delivery parts & services.",
+  },
+   {
+    id: "faq17",
+    type: "owner",
+    question: "What if I need to cancel or reschedule a booking?",
+    answer: "You can cancel or reschedule through your account dashboard, but please review the cancellation policy of the vendor before proceeding.",
+  },
+   {
+    id: "faq18",
+    type: "owner",
+    question: "How are refunds or disputes handled?",
+    answer: "If a product is faulty or a service was not delivered as promised, you can raise a dispute from your account. Our team will mediate and issue a refund where applicable. Please review the refund policy of the vendor before proceeding.",
   }
+
 ];
 export const serviceListCardData = [
   {
@@ -532,13 +589,133 @@ export const vehicleDeliveryData = [
     value: "15,000 km",
   },
 ];
-export const sidebarLinks=[
-  {name:"Edit Profile", path:"/dashboard/vehicleOwner", icon:''},
-  {name:"Vehicles", path:"", icon:''},
-  {name:"Orders", path:"", icon:''},
-  {name:"Bookings", path:"", icon:''},
-  {name:"Change Password", path:"", icon:''},
-  {name:"Settings", path:"", icon:''},
-  {name:"Language", path:"", icon:''},
-  {name:"Logout", path:"", icon:''},
-]
+export const sidebarLinks = [ 
+  { name: "Edit Profile", path: "/dashboard/vehicleOwner", icon: <FaUserEdit /> },
+  { name: "Vehicles", path: "/dashboard/vehicleOwner/vehicles", icon: <FaCar /> },
+  { name: "Orders", path: "/dashboard/vehicleOwner/orders", icon: <MdLocalShipping /> },
+  { name: "Bookings", path: "/dashboard/vehicleOwner/bookings", icon: <MdEventSeat /> },
+  { name: "Change Password", path: "/dashboard/vehicleOwner/change-password", icon: <FaKey /> },
+  { name: "Settings", path: "/dashboard/vehicleOwner/settings", icon: <FaCog /> },
+  { name: "Language", path: "/dashboard/vehicleOwner/languages", icon: <FaLanguage /> },
+  { name: "Logout", action: "logout", icon: <FaSignOutAlt /> }, 
+];
+
+export const VehicleOwnerVehiclesData = [
+  {
+      id: 1,
+      brand: 'Toyota',
+      model: 'Corolla',
+      year: 2021,
+      engineSize: '1.8L',
+      fuelType: 'Petrol',
+      transmission: 'Automatic'
+    },
+    {
+      id: 2,
+      brand: 'Honda',
+      model: 'Civic',
+      year: 2020,
+      engineSize: '2.0L',
+      fuelType: 'Petrol',
+      transmission: 'Manual'
+    },
+    {
+      id: 3,
+      brand: 'Ford',
+      model: 'Focus',
+      year: 2019,
+      engineSize: '1.5L',
+      fuelType: 'Diesel',
+      transmission: 'Automatic'
+    },
+    {
+      id: 4,
+      brand: 'Chevrolet',
+      model: 'Malibu',
+      year: 2022,
+      engineSize: '1.5L',
+      fuelType: 'Petrol',
+      transmission: 'Automatic'
+    },
+    {
+      id: 5,
+      brand: 'Nissan',
+      model: 'Sentra',
+      year: 2021,
+      engineSize: '2.0L',
+      fuelType: 'Petrol',
+      transmission: 'CVT'
+    }
+  ];
+export const VehicleOwnerOrdersData = [
+    {
+      id: 1,
+      customer: "John Doe",
+      orderId: "#ORD123",
+      date: "Aug 24, 2025",
+      amount: "$120",
+      status: "Pending",
+    },
+    {
+      id: 2,
+      customer: "Sarah Smith",
+      orderId: "#ORD124",
+      date: "Aug 25, 2025",
+      amount: "$250",
+      status: "Completed",
+    },
+    {
+      id: 3,
+      customer: "Michael Johnson",
+      orderId: "#ORD125",
+      date: "Aug 26, 2025",
+      amount: "$80",
+      status: "Processing",
+    },
+     {
+      id: 4,
+      customer: "Michael Johnson",
+      orderId: "#ORD125",
+      date: "Aug 26, 2025",
+      amount: "$80",
+      status: "Cancelled",
+    },
+  ];
+
+export const VehicleOwnerBookingsData = [
+  {
+    id: 1,
+    bookingId: "#BK001",
+    service: "Oil Change",
+    date: "Aug 28, 2025",
+    status: "Confirmed",
+  },
+  {
+    id: 2,
+    bookingId: "#BK002",
+    service: "Car Wash",
+    date: "Sep 02, 2025",
+    status: "Pending",
+  },
+  {
+    id: 3,
+    bookingId: "#BK003",
+    service: "Brake Inspection",
+    date: "Sep 05, 2025",
+    status: "Cancelled",
+  },
+  {
+    id: 4,
+    bookingId: "#BK004",
+    service: "Engine Tune-up",
+    date: "Sep 08, 2025",
+    status: "Confirmed",
+  },
+  {
+    id: 5,
+    bookingId: "#BK005",
+    service: "AC Repair",
+    date: "Sep 12, 2025",
+    status: "Pending",
+  },
+];

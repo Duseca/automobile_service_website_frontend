@@ -26,6 +26,12 @@ import Chat from './pages/Chat/Chat'
 import RootLayout from './layouts/RootLayout'
 import EditProfile from './pages/ServiceProviderDashboard/EditProfile'
 import VehicleOwnerEditProfile from './pages/VehicleOwnerDashboard/VehicleOwnerEditProfile'
+import VehicleOwnerVehicles from './pages/VehicleOwnerDashboard/VehicleOwnerVehicles'
+import VehicleOwnerOrder from './pages/VehicleOwnerDashboard/VehicleOwnerOrder'
+import VehicleOwnerBookings from './pages/VehicleOwnerDashboard/VehicleOwnerBookings'
+import VehicleOwnerChangePassword from './pages/VehicleOwnerDashboard/VehicleOwnerChangePassword'
+import VehicleOwnerSettings from './pages/VehicleOwnerDashboard/VehicleOwnerSettings'
+import VehicleOwnerLanguage from './pages/VehicleOwnerDashboard/VehicleOwnerLanguage'
 function App() {
   return (
     <>
@@ -56,7 +62,13 @@ function App() {
     <Route index element={<EditProfile />} />
     </Route>
  <Route path="/dashboard/vehicleOwner" element={<RootLayout />}>
-    <Route index element={<VehicleOwnerEditProfile />} />
+     <Route index element={<VehicleOwnerEditProfile />} />
+     <Route path='vehicles' element={<VehicleOwnerVehicles />} />
+     <Route path='orders' element={<VehicleOwnerOrder />} />
+     <Route path='bookings' element={<VehicleOwnerBookings />} />
+     <Route path='change-password' element={<VehicleOwnerChangePassword />} />
+     <Route path='settings' element={<VehicleOwnerSettings />} />
+     <Route path='languages' element={<VehicleOwnerLanguage />} />
     </Route>
     </Routes>
     </>

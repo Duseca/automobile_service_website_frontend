@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { BackArrowIcon, NextArrowIcon, StarIcon } from "./Icons";
 import YellowButton from "./YellowButton";
 import { Link } from "react-router";
-
+import VendorLogo from '../assets/ProductCarousel.svg';
 export interface Product {
   id: string;
   name: string;
@@ -133,8 +133,8 @@ const ProductCarousel = ({
                       </div>
 
                       <div className="flex items-center mb-3">
-                        <span className="text-lg mr-2">{product.vendorLogo}</span>
-                        <span className="text-sm text-black">
+                        <span className="text-lg mr-2"><img className="w-5 h-5" src={VendorLogo}/></span>
+                        <span className="text-sm font-medium text-black">
                           {product.vendor}
                         </span>
                       </div>

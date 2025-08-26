@@ -4,10 +4,10 @@ import { ToggleIcon } from '../../components/Icons';
 
 const FAQ = () => {
  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<'personal' | 'business'>('business');
+  const [activeTab, setActiveTab] = useState<'owner' | 'vendor'>('vendor');
 
-  const businessFaqs = faqs.filter(faq => faq.type === 'business');
-  const otherFaqs = faqs.filter(faq => faq.type !== 'business');
+  const businessFaqs = faqs.filter(faq => faq.type === 'vendor');
+  const otherFaqs = faqs.filter(faq => faq.type === 'owner');
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -32,21 +32,21 @@ const FAQ = () => {
           <div className="flex justify-around  my-6 ">
             <button
               className={`py-2 px-4 font-semibold w-1/2 text-base focus:outline-none ${
-                activeTab === 'business'
+                activeTab === 'vendor'
                   ? 'text-primary border-b-2 border-primary'
                   : 'text-[#83898F] hover:text-gray-700'
               }`}
-              onClick={() => setActiveTab('business')}
+              onClick={() => setActiveTab('vendor')}
             >
               Business Account
             </button>
             <button
               className={`py-2 px-4 font-semibold w-1/2  text-base focus:outline-none ${
-                activeTab === 'personal'
+                activeTab === 'owner'
                   ? 'text-primary border-b-2 border-primary'
                   : 'text-[#83898F] hover:text-gray-700'
               }`}
-              onClick={() => setActiveTab('personal')}
+              onClick={() => setActiveTab('owner')}
             >
               Personal Account
             </button>
@@ -54,7 +54,7 @@ const FAQ = () => {
         
           <div className="text-black flex items-start justify-start">
             <ul className=" w-full">
-              {(activeTab === 'business' ? businessFaqs : otherFaqs)?.map((item, index) => {
+              {(activeTab === 'vendor' ? businessFaqs : otherFaqs)?.map((item, index) => {
                 const isOpen = openIndex === index;
                 return (
                   <li key={index}>

@@ -4,7 +4,7 @@ import Logo from '../../assets/Logo.svg';
 const Footer = () => {
   return (
 <footer className="bg-primary text-white mt-auto">
-  <div className="w-full max-w-screen-xl mx-auto p-4 md:px-8 lg:px-12 xl:px-[80px]">
+  <div className="w-full max-w-screen-xl1 mx-auto p-4 md:px-8  xl1:px-[80px]">
     {/* Top Section */}
     <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
       
@@ -13,7 +13,6 @@ const Footer = () => {
         <img src={Logo} alt="Logo" className="w-40 h-10 object-contain" />
       </div>
 
-      {/* Navigation Links */}
       <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-sm font-medium">
         <Link to="/" className="hover:underline">Home</Link>
         <Link to="/about-us" className="hover:underline">About</Link>

@@ -274,3 +274,31 @@ export const CrossIcon = () =>{
 </svg>
 )
 }
+export const EditIcon = () =>{
+  return(<svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.16602 1.66699H7.49935C3.33268 1.66699 1.66602 3.33366 1.66602 7.50033V12.5003C1.66602 16.667 3.33268 18.3337 7.49935 18.3337H12.4993C16.666 18.3337 18.3327 16.667 18.3327 12.5003V10.8337" stroke="#061420" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3675 2.51639L6.80088 9.08306C6.55088 9.33306 6.30088 9.82472 6.25088 10.1831L5.89254 12.6914C5.75921 13.5997 6.40088 14.2331 7.30921 14.1081L9.81754 13.7497C10.1675 13.6997 10.6592 13.4497 10.9175 13.1997L17.4842 6.63306C18.6175 5.49972 19.1509 4.18306 17.4842 2.51639C15.8175 0.849722 14.5009 1.38306 13.3675 2.51639Z" stroke="#061420" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.4258 3.45801C12.9841 5.44967 14.5424 7.00801 16.5424 7.57467" stroke="#061420" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
+}
+export const DeleteIcon = () =>{
+  return(<svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.5 4.98307C14.725 4.70807 11.9333 4.56641 9.15 4.56641C7.5 4.56641 5.85 4.64974 4.2 4.81641L2.5 4.98307" stroke="#FEFEFE" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.08398 4.14199L7.26732 3.05033C7.40065 2.25866 7.50065 1.66699 8.90898 1.66699H11.0923C12.5007 1.66699 12.609 2.29199 12.734 3.05866L12.9173 4.14199" stroke="#FEFEFE" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.7077 7.61621L15.166 16.0079C15.0743 17.3162 14.9993 18.3329 12.6743 18.3329H7.32435C4.99935 18.3329 4.92435 17.3162 4.83268 16.0079L4.29102 7.61621" stroke="#FEFEFE" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.60742 13.75H11.3824" stroke="#FEFEFE" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.91602 10.417H12.0827" stroke="#FEFEFE" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+)
+}
+export const VerticleEllipseIcon = () => {
+  return (<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="38" height="39" rx="8" fill="#E9F4FA"/>
+<circle cx="19" cy="12.5" r="2" fill="#0071BC"/>
+<circle cx="19" cy="19.5" r="2" fill="#0071BC"/>
+<circle cx="19" cy="26.5" r="2" fill="#0071BC"/>
+</svg>
+)
+}
