@@ -12,12 +12,14 @@ import Reviews from './Reviews';
 import SupportSection from './SupportSection';
 import HowItWorks from './HowItWorks';
 import { useEffect } from 'react';
+import Header from '../../components/Header';
 const LandingPage = () => {
     useEffect(() => {
       window.scrollTo(0, 0);
     }, []);
   return (
     <div>
+      <Header />
       <Hero bgImage={bgImage}
        subtitle={"Whether you need a quick oil change, a trusted mechanic, or you're a garage looking to offer your services, we make it easy to connect the right people at the right time."}
   

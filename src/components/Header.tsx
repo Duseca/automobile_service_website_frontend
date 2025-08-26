@@ -54,12 +54,12 @@ const dummyUser = {
         <div className="hidden md:flex items-center justify-end space-x-4">
           {dummyUser ? (
             <>
-              <button className="relative p-1 text-gray-700 hover:text-blue-500 cursor-pointer">
+              <Link to={"order"} className="relative p-1 text-gray-700 hover:text-blue-500 cursor-pointer">
                 <BagIcon />
                 <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
                   3
                 </span>
-              </button>
+              </Link>
 
               <Link to={"/chat"} className="relative p-1 text-gray-700 hover:text-blue-500 cursor-pointer">
                 <MessageIcon />
