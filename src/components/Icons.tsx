@@ -302,3 +302,12 @@ export const VerticleEllipseIcon = () => {
 </svg>
 )
 }
+export const DownloadIcon = () =>{
+  return(<svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.59922 1.40039H10.9992V8.60039H13.9992L8.59922 14.0004M8.59922 1.40039H6.19922V8.60039H3.19922L8.59922 14.0004" fill="#0071BC"/>
+<path d="M8.59922 1.40039H10.9992V8.60039H13.9992L8.59922 14.0004L3.19922 8.60039H6.19922V1.40039H8.59922Z" stroke="#0071BC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.39844 19.4004H15.7984" stroke="#0071BC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+)
+}

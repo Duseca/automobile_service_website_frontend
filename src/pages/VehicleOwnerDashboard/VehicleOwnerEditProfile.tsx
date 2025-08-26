@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { BiDownArrow } from "react-icons/bi"
 import { BsTrash2 } from "react-icons/bs"
 import TextInput from "../../components/TextInput";
 import YellowButton from "../../components/YellowButton";
+import {  DownloadIcon } from "../../components/Icons";
 
 
 const VehicleOwnerEditProfile = () => {
@@ -84,15 +84,15 @@ const VehicleOwnerEditProfile = () => {
               <p className="text-sm text-gray-500">{profileImage.size}</p>
             </div>
           </div>
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 bg-red-400">
             <button
               onClick={handleImageDelete}
               className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
             >
-              <BsTrash2 size={16} />
+              <BsTrash2 />
             </button>
-            <button className="p-2 text-blue-500 hover:bg-blue-50 rounded-lg transition-colors">
-              <BiDownArrow size={16} />
+            <button className="p-2 text-primary hover:bg-blue-50 rounded-lg transition-colors">
+              <DownloadIcon />
             </button>
           </div>
         </div>
