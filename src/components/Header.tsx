@@ -40,7 +40,7 @@ const dummyUser = {
               to={item.to}
               className={({ isActive }) =>
                 `flex flex-col items-center transition-colors duration-200 ${
-                  isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-500"
+                  isActive ? "text-primary" : "text-gray-600 hover:text-primary"
                 }`
               }
             >

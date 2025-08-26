@@ -101,7 +101,7 @@ const VehicleOwnerOrder = () => {
               <td className="px-6 py-4 text-right">
                 <div className="flex justify-end space-x-2">
                   <button
-                    className="px-3 py-2 bg-yellow-500 text-black font-medium rounded-lg hover:bg-yellow-600 transition-colors"
+                    className="px-3 py-2 bg-[#FFCC00] text-black font-medium rounded-lg hover:bg-yellow-600 transition-colors"
                     title="Reorder"
                   >
                     Reorder

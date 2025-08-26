@@ -24,7 +24,6 @@ import ServiceOrder from './pages/ServiceOrder/ServiceOrder'
 import StoreOwnerProfile from './pages/Profile/StoreOwnerProfile'
 import Chat from './pages/Chat/Chat'
 import RootLayout from './layouts/RootLayout'
-import EditProfile from './pages/ServiceProviderDashboard/EditProfile'
 import VehicleOwnerEditProfile from './pages/VehicleOwnerDashboard/VehicleOwnerEditProfile'
 import VehicleOwnerVehicles from './pages/VehicleOwnerDashboard/VehicleOwnerVehicles'
 import VehicleOwnerOrder from './pages/VehicleOwnerDashboard/VehicleOwnerOrder'
@@ -32,6 +31,9 @@ import VehicleOwnerBookings from './pages/VehicleOwnerDashboard/VehicleOwnerBook
 import VehicleOwnerChangePassword from './pages/VehicleOwnerDashboard/VehicleOwnerChangePassword'
 import VehicleOwnerSettings from './pages/VehicleOwnerDashboard/VehicleOwnerSettings'
 import VehicleOwnerLanguage from './pages/VehicleOwnerDashboard/VehicleOwnerLanguage'
+import ServiceProviderEditProfile from './pages/ServiceProviderDashboard/ServiceProviderEditProfile'
+import ServiceProviderStoreDetails from './pages/ServiceProviderDashboard/ServiceProviderStoreDetails'
+import ServiceProviderOrders from './pages/ServiceProviderDashboard/ServiceProviderOrders'
 function App() {
   return (
     <>
@@ -59,7 +61,9 @@ function App() {
 <Route path="/profile" element={<StoreOwnerProfile />}/>
 <Route path="/chat" element={<Chat />}/>
  <Route path="/dashboard/serviceProvider" element={<RootLayout />}>
-    <Route index element={<EditProfile />} />
+    <Route index element={<ServiceProviderEditProfile />} />
+    <Route path="storeDetails" element={<ServiceProviderStoreDetails />} />
+     <Route path="orders" element={<ServiceProviderOrders />} />
     </Route>
  <Route path="/dashboard/vehicleOwner" element={<RootLayout />}>
      <Route index element={<VehicleOwnerEditProfile />} />

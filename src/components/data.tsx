@@ -589,7 +589,7 @@ export const vehicleDeliveryData = [
     value: "15,000 km",
   },
 ];
-export const sidebarLinks = [ 
+export const vehicleSidebarLinks = [ 
   { name: "Edit Profile", path: "/dashboard/vehicleOwner", icon: <FaUserEdit /> },
   { name: "Vehicles", path: "/dashboard/vehicleOwner/vehicles", icon: <FaCar /> },
   { name: "Orders", path: "/dashboard/vehicleOwner/orders", icon: <MdLocalShipping /> },
@@ -599,7 +599,20 @@ export const sidebarLinks = [
   { name: "Language", path: "/dashboard/vehicleOwner/languages", icon: <FaLanguage /> },
   { name: "Logout", action: "logout", icon: <FaSignOutAlt /> }, 
 ];
-
+export const serviceProviderSidebarLinks = [ 
+  { name: "Edit Profile", path: "/dashboard/serviceProvider", icon: <FaUserEdit /> },
+  { name: "Store Details", path: "/dashboard/serviceProvider/storeDetails", icon: <FaCar /> },
+  { name: "Orders", path: "/dashboard/serviceProvider/orders", icon: <MdLocalShipping /> },
+  { name: "Bookings", path: "/dashboard/serviceProvider/bookings", icon: <MdEventSeat /> },
+  { name: "My Services", path: "/dashboard/serviceProvider/bookings", icon: <MdEventSeat /> }, 
+  { name: "My Products", path: "/dashboard/serviceProvider/bookings", icon: <MdEventSeat /> },
+  { name: "Insights", path: "/dashboard/serviceProvider/bookings", icon: <MdEventSeat /> }, 
+  { name: "Change Password", path: "/dashboard/serviceProvider/change-password", icon: <FaKey /> },
+  { name: "Settings", path: "/dashboard/serviceProvider/settings", icon: <FaCog /> },
+  { name: "Staff Members", path: "/dashboard/serviceProvider/settings", icon: <FaCog /> },
+  { name: "Language", path: "/dashboard/serviceProvider/languages", icon: <FaLanguage /> },
+  { name: "Logout", action: "logout", icon: <FaSignOutAlt /> }, 
+];
 export const VehicleOwnerVehiclesData = [
   {
       id: 1,
@@ -719,3 +732,29 @@ export const VehicleOwnerBookingsData = [
     status: "Pending",
   },
 ];
+export const ServiceProviderBunsiessFaq=[
+  {
+      id: "FAQ 1",
+      question: "What is your return or refund policy?",
+      answer:
+        "We accept returns within 7 days if the product is unused and in original packaging. Refunds are issued within 3-5 business days.",
+    },
+    {
+      id: "FAQ 2",
+      question: "Do you offer home delivery?",
+      answer:
+        "Yes, we provide home delivery within city limits. Delivery charges may apply depending on the location.",
+    },
+    {
+      id: "FAQ 3",
+      question: "Do your products come with a warranty?",
+      answer:
+        "Yes, most of our products come with a 6-month warranty. Please check the product page for warranty details.",
+    },
+    {
+      id: "FAQ 4",
+      question: "Can I change or cancel my order after placing it?",
+      answer:
+        "Yes, you can cancel or modify your order within 24 hours by contacting our customer support team.",
+    },
+]

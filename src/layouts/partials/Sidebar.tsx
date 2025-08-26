@@ -1,10 +1,11 @@
 
 import {  NavLink} from "react-router-dom";
 import { useState } from "react";
-import { sidebarLinks } from "../../components/data";
 import Modal from "../../components/Modal";
-
-const Sidebar = () => {
+interface SidebarProps {
+  sidebarLinks: any[];
+}
+const Sidebar = ({ sidebarLinks }:SidebarProps) => {
  const [showMenu, setShowMenu] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
 

@@ -61,7 +61,7 @@ const VehicleOwnerBookings = () => {
                 <td className="px-6 py-4">
                   <div className="flex space-x-2">
                     <button
-                      className="p-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
+                      className="p-2 bg-[#FFCC00] text-black rounded-lg transition-colors"
                       title="Reschedule booking"
                     >
                       Reschedule
