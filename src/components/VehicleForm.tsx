@@ -2,12 +2,12 @@ import Dropdown from './Dropdown';
 
 interface VehicleFormProps {
   formData: {
-    make: string;
-    model: string;
-    year: string;
-    engineSize: string;
-    fuelType: string;
-    transmissionType: string;
+    make?: string;
+    model?: string;
+    year?: string;
+    engineSize?: string;
+    fuelType?: string;
+    transmissionType?: string;
   };
   handleChange: (val: any) => void;
 }
@@ -24,42 +24,43 @@ const VehicleForm = ({ formData, handleChange }: VehicleFormProps) => {
       <Dropdown
         label="Make"
         name="make"
-        value={formData.make}
+        value={formData.make ? formData.make: ''}
         options={['Toyota', 'Honda', 'Ford', 'BMW', 'Audi']}
         onChange={handleChange}
       />
       <Dropdown
         label="Model"
         name="model"
-        value={formData.model}
+        value={formData.model? formData.model: ''}
         options={['Corolla', 'Civic', 'Mustang', 'X5', 'A4']}
         onChange={handleChange}
       />
       <Dropdown
         label="Manufacture Year"
         name="year"
-        value={formData.year}
+        value={formData.year? formData.year : ''}
         options={yearOptions}
         onChange={handleChange}
       />
       <Dropdown
         label="Engine Size"
         name="engineSize"
-        value={formData.engineSize}
+        value={formData.engineSize? formData.engineSize: ''}
         options={['1.0L', '1.6L', '2.0L', '3.0L', '4.0L']}
         onChange={handleChange}
       />
       <Dropdown
         label="Fuel Type"
         name="fuelType"
-        value={formData.fuelType}
+        value={formData.engineSize?formData.engineSize:''}
         options={['Petrol', 'Diesel', 'Hybrid', 'Electric']}
         onChange={handleChange}
       />
+      
       <Dropdown
         label="Transmission Type"
         name="transmissionType"
-        value={formData.transmissionType}
+        value={formData.transmissionType? formData.transmissionType:''}
         options={['Manual', 'Automatic', 'Semi-Automatic']}
         onChange={handleChange}
       />

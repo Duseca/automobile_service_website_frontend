@@ -34,6 +34,13 @@ import VehicleOwnerLanguage from './pages/VehicleOwnerDashboard/VehicleOwnerLang
 import ServiceProviderEditProfile from './pages/ServiceProviderDashboard/ServiceProviderEditProfile'
 import ServiceProviderStoreDetails from './pages/ServiceProviderDashboard/ServiceProviderStoreDetails'
 import ServiceProviderOrders from './pages/ServiceProviderDashboard/ServiceProviderOrders'
+import ServiceProviderCreateOrder from './pages/ServiceProviderDashboard/CreateOrder/ServiceProviderCreateOrder'
+import ServiceProviderServices from './pages/ServiceProviderDashboard/ServiceProviderServices'
+import ServiceProviderInsights from './pages/ServiceProviderDashboard/modals/ServiceProviderInsights'
+import ServiceProviderChangePassword from './pages/ServiceProviderDashboard/ServiceProviderChangePassword'
+import ServiceProviderSettings from './pages/ServiceProviderDashboard/ServiceProviderSettings'
+import ServiceProviderLanguage from './pages/ServiceProviderDashboard/ServiceProviderLanguage'
+import ServiceProviderStaffMembers from './pages/ServiceProviderDashboard/ServiceProviderStaffMembers'
 function App() {
   return (
     <>
@@ -60,11 +67,21 @@ function App() {
 <Route path="/service-order" element={<ServiceOrder />}/>
 <Route path="/profile" element={<StoreOwnerProfile />}/>
 <Route path="/chat" element={<Chat />}/>
- <Route path="/dashboard/serviceProvider" element={<RootLayout />}>
-    <Route index element={<ServiceProviderEditProfile />} />
-    <Route path="storeDetails" element={<ServiceProviderStoreDetails />} />
-     <Route path="orders" element={<ServiceProviderOrders />} />
-    </Route>
+<Route path="/dashboard/serviceProvider" element={<RootLayout />}> 
+  <Route index element={<ServiceProviderEditProfile />} />
+  <Route path="storeDetails" element={<ServiceProviderStoreDetails />} />
+  <Route path="orders">
+    <Route index element={<ServiceProviderOrders />} />
+    <Route path="create" element={<ServiceProviderCreateOrder />} />
+  </Route>
+  <Route path="services" element={<ServiceProviderServices />} />
+  <Route path="insights" element={<ServiceProviderInsights />} />
+  <Route path="change-password" element={<ServiceProviderChangePassword />} />
+  <Route path="settings" element={<ServiceProviderSettings />} />
+   <Route path="staff-members" element={<ServiceProviderStaffMembers />} />
+  <Route path="languages" element={<ServiceProviderLanguage />} />
+</Route>
+
  <Route path="/dashboard/vehicleOwner" element={<RootLayout />}>
      <Route index element={<VehicleOwnerEditProfile />} />
      <Route path='vehicles' element={<VehicleOwnerVehicles />} />

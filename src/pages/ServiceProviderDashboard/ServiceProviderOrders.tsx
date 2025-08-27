@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { VehicleOwnerOrdersData } from "../../components/data";
+import ServiceProviderOrderDetail from "./modals/ServiceProviderOrderDetail";
+import YellowButton from "../../components/YellowButton";
+import { Link } from "react-router";
 
 const ServiceProviderOrders = () => {
     const [activeTab, setActiveTab] = useState("All");
       const tabs = ["All", "Pending", "Processing", "Completed", "Cancelled", "Returns"];
-    
+      const [selectedOrder, setSelectedOrder] = useState({})
+    const [showModal, setShowModal] = useState(false)
       const filteredOrders =
         activeTab === "All"
           ? VehicleOwnerOrdersData
@@ -20,6 +24,12 @@ const ServiceProviderOrders = () => {
             with ease.
           </p>
         </div>
+        <Link to={"create"}>
+        <YellowButton 
+      text="Create new Order" 
+      wFull={false} 
+    />
+        </Link>
       </div>
     
       {/* Tabs */}
@@ -96,7 +106,15 @@ const ServiceProviderOrders = () => {
                       >
                         Update
                       </button>
-                      
+                       <button
+                       onClick={()=>{
+                        setShowModal(true)
+                        setSelectedOrder(order)}}
+                        className="px-3 py-2 bg-light-blue text-primary rounded-lg cursor-pointer transition-colors"
+                        title="Cancel"
+                      >
+                       View
+                      </button>
                     
                     </div>
                   </td>
@@ -112,10 +130,13 @@ const ServiceProviderOrders = () => {
               <h3 className="text-lg font-medium text-gray-900 mb-2">No orders found</h3>
             </div>
           )}
-    
-          {/* Modals */}
+      
+            {showModal &&   <ServiceProviderOrderDetail 
+          order={selectedOrder}
+          onClose={()=>setShowModal(false)}
+          />}
           
-         
+      
     </div>
   )
 }

@@ -29,7 +29,7 @@ const VehicleOwnerVehicles = () => {
   return (
  <div className="bg-white p-6 m-4 border rounded-xl border-gray-100">
   {/* Header */}
-  <div className="flex justify-between items-start mb-8">
+  <div className="flex justify-between items-start mb-6">
     <div>
       <h1 className="text-2xl font-semibold text-black mb-2">Manage Vehicles</h1>
       <p className="text-[#83898F]">

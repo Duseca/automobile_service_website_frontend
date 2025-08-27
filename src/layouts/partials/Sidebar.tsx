@@ -105,7 +105,7 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({ name, path, icon, onClick }) 
     return (
       <li onClick={onClick}>
       <NavLink
-      end 
+       
         to={path? path : '/'}
         className={({ isActive }) =>
           isActive

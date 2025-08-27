@@ -1,5 +1,5 @@
 interface DropdownProps {
-  label: string;
+  label?: string;
   name: any;
   value: string;
   options: string[];

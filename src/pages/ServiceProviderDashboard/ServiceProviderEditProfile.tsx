@@ -83,7 +83,7 @@ const ServiceProviderEditProfile = () => {
               <p className="text-sm text-gray-500">{profileImage.size}</p>
             </div>
           </div>
-          <div className="flex space-x-2 bg-red-400">
+          <div className="flex space-x-2">
             <button
               onClick={handleImageDelete}
               className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
