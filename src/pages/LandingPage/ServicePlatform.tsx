@@ -10,9 +10,8 @@ const ServicePlatform = () => {
             Got a Service to List or a Ride to Fix?
           </h1>
           <p className="text-[#83898F] text-lg leading-relaxed max-w-2xl mx-auto">
-            Whether you're here to grow your business or take care of your car, we've got you covered.
-            Our platform makes it easy for service providers to list what they offer — and for car
-            owners to find exactly what they need.
+           Whether you’re growing your business or caring for your car, VeFix has you covered.
+Service providers can list what they offer. Car owners can find exactly what they need — fast.
           </p>
         </div>
        <div className="grid md:grid-cols-2 gap-8 lg:px-24">

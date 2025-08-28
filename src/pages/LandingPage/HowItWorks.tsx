@@ -44,9 +44,7 @@ const HowItWorks = () => {
     </div>
     <div className="flex flex-col justify-start lg:justify-center items-center h-auto">
       <p className="text-gray-600 text-base md:text-lg leading-relaxed text-left mb-6">
-        Get services and buying products for your cars has never been easier.
-        Our streamlined process makes it simple for you to book appointments
-        and confirm your vehicle of choice online.
+       Booking services and buying products for your car has never been easier.
       </p>
       <div className="bg-light-blue rounded-3xl p-6 relative overflow-hidden w-full h-auto md:h-[600px] mt-10">
         <div className="relative w-full h-full flex items-center justify-center">

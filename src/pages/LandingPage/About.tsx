@@ -11,14 +11,16 @@ import HowItWorks from './HowItWorks';
 import { useEffect } from 'react';
 import Simplicity from './Simplicity';
 import FeauturesAbout from './FeauturesAbout';
+import Header from '../../components/Header';
 const About = () => {
       useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div>
+      <Header />
       <Hero bgImage={bgImage}
-       subtitle={"Whether you need a quick oil change, a trusted mechanic, or you're a garage looking to offer your services, we make it easy to connect the right people at the right time."}
+       subtitle={"From oil changes to trusted mechanics and garages, VeFix makes it easy to find the right service — anytime, anywhere."}
   
         titleTwo={""}
           title={"Auto Care Made Easy for Everyone"} />

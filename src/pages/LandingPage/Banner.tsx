@@ -9,11 +9,23 @@ const Banner = () => {
   <div className="flex items-center max-w-6xl mx-auto gap-12">
     <img  />
     <div className="flex-1 text-black">
-      <p className="text-base md:text-lg">
-       Looking after your car shouldn’t be a hassle. That’s why we’ve made it easy to find trusted
-        <br className="hidden md:block" /> 
-       services, list your business, or just explore what’s out there—all in one place.
+       <div className="flex-1 text-black">
+     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-5">
+        Simplify Car Care
+      </h2>
+      <p className="text-sm md:text-lg leading-relaxed">
+        Looking after your car shouldn’t be a hassle. VeFix makes it easy to:
       </p>
+      <ul className="list-disc pl-6 text-sm md:text-lg space-y-1 mt-2">
+        <li>Find trusted services</li>
+        <li>List your business</li>
+        <li>Explore what’s out there</li>
+      </ul>
+      <p className="text-sm md:text-lg mt-4">
+        All in one platform. Whether you want services, list your business, or
+        just explore what’s out there—all in one place.
+      </p>
+    </div>
     </div>
     </div>
     

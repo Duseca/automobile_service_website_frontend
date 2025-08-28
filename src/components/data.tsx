@@ -5,8 +5,12 @@ import verifiedProvider from  '../assets/verified-provider.svg';
 import securePayments from '../assets/secure-payments.svg';
 import dedicatedSupport from '../assets/dedicated-support.svg';
 import realReviews from '../assets/real-reviews.svg';
-import { FaUserEdit, FaCar,  FaKey, FaCog, FaLanguage, FaSignOutAlt } from "react-icons/fa";
-import { MdLocalShipping, MdEventSeat } from "react-icons/md";
+import { 
+  FaUserEdit, FaCar, FaKey, FaCog, FaLanguage, FaSignOutAlt, FaBoxOpen, FaUsers 
+} from "react-icons/fa";
+import { MdLocalShipping, MdEventAvailable, MdStoreMallDirectory, MdInsights, MdEventSeat } from "react-icons/md";
+import { RiShoppingBag3Fill } from "react-icons/ri";
+
 export const faqs = [
   {
     id: "faq1",
@@ -124,7 +128,7 @@ export const serviceListCardData = [
     id: 1,
     title: "Book or Buy What You Need",
     description:
-      "Find trusted service providers, compare options, and book appointments or purchase car parts with just a few clicks. Convenience and confidence, all in one place.",
+      "Find trusted providers, compare options, and book appointments or order car parts in just a few clicks. Convenience and confidence, all in one place.",
     gradient: "from-yellow-400 to-yellow-500",
     textColor: "text-yellow-50",
     bgImage: bannerImage,
@@ -138,7 +142,7 @@ export const serviceListCardData = [
     id: 2,
     title: "List Your Products & Services",
     description:
-      "Share your expertise with the community. From spare parts to detailing services — create listings, manage bookings, and grow your automotive business with ease.",
+      "Share your expertise with the VeFix community. From spare parts to detailing services — create listings, manage bookings, and grow your automotive business with ease.",
     gradient: "from-blue-500 to-blue-600",
     textColor: "text-blue-50",
     bgImage: serviceBannerImage,
@@ -174,23 +178,23 @@ export const reviews = [
 export const supportData = [
   {
     title: "Verified Providers",
-    description: "Only verified businesses can list products.",
+    description: "Only verified businesses can list products and services on VeFix — so customers can book with trust and confidence.",
     image : verifiedProvider, 
   },
   {
     title: "Real Reviews",
-    description: "Genuine feedback from real customers—no fake ratings.",
+    description: "Get honest feedback from real customers — no fake ratings, just genuine experiences you can count on.",
     image : realReviews, 
   
   },
   {
     title: "Secure Payments",
-    description: "Your payments are safe, encrypted, and hassle-free.",
+    description: "Your payments are safe, encrypted, and hassle-free. Every transaction is protected so you can book with confidence.",
     image : securePayments, 
   },
   {
     title: "Dedicated Support",
-    description: "We're here to help with your booking details.",
+    description: "Need help? Our support team is always here to guide you through bookings, listings, and anything in between.",
    image : dedicatedSupport,
 
   },
@@ -207,7 +211,7 @@ export const howItWorks = [
     },
     {
       title: "Add Your Vehicle or Listing",
-      description: "Get Started.",
+      description: " Get started in minutes.",
       icon: () =><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M27 3H9C6.51 3 4.5 4.995 4.5 7.455V23.82C4.5 26.28 6.51 28.29 9 28.29H10.14C11.325 28.29 12.48 28.755 13.32 29.595L15.885 32.13C17.055 33.285 18.945 33.285 20.115 32.13L22.68 29.595C23.52 28.755 24.675 28.29 25.86 28.29H27C29.49 28.29 31.5 26.28 31.5 23.82V7.455C31.5 4.995 29.49 3 27 3ZM18 8.325C19.62 8.325 20.925 9.645 20.925 11.25C20.925 12.84 19.665 14.115 18.105 14.175C18.045 14.175 17.955 14.175 17.88 14.175C16.305 14.115 15.06 12.84 15.06 11.25C15.075 9.645 16.38 8.325 18 8.325ZM22.125 22.035C19.86 23.55 16.14 23.55 13.875 22.035C11.88 20.715 11.88 18.525 13.875 17.19C16.155 15.675 19.875 15.675 22.125 17.19C24.12 18.525 24.12 20.7 22.125 22.035Z" fill="#FEFEFE"/>
 </svg>
@@ -601,15 +605,15 @@ export const vehicleSidebarLinks = [
 ];
 export const serviceProviderSidebarLinks = [ 
   { name: "Edit Profile", path: "/dashboard/serviceProvider", icon: <FaUserEdit /> },
-  { name: "Store Details", path: "/dashboard/serviceProvider/storeDetails", icon: <FaCar /> },
+  { name: "Store Details", path: "/dashboard/serviceProvider/storeDetails", icon: <MdStoreMallDirectory /> },
   { name: "Orders", path: "/dashboard/serviceProvider/orders", icon: <MdLocalShipping /> },
-  { name: "Bookings", path: "/dashboard/serviceProvider/bookings", icon: <MdEventSeat /> },
-  { name: "My Services", path: "/dashboard/serviceProvider/services", icon: <MdEventSeat /> }, 
-  { name: "My Products", path: "/dashboard/serviceProvider/bookings", icon: <MdEventSeat /> },
-  { name: "Insights", path: "/dashboard/serviceProvider/insights", icon: <MdEventSeat /> }, 
+  { name: "Bookings", path: "/dashboard/serviceProvider/bookings", icon: <MdEventAvailable /> },
+  { name: "My Services", path: "/dashboard/serviceProvider/services", icon: <RiShoppingBag3Fill /> }, 
+  { name: "My Products", path: "/dashboard/serviceProvider/my-products", icon: <FaBoxOpen /> },
+  { name: "Insights", path: "/dashboard/serviceProvider/insights", icon: <MdInsights /> }, 
   { name: "Change Password", path: "/dashboard/serviceProvider/change-password", icon: <FaKey /> },
   { name: "Settings", path: "/dashboard/serviceProvider/settings", icon: <FaCog /> },
-  { name: "Staff Members", path: "/dashboard/serviceProvider/staff-members", icon: <FaCog /> },
+  { name: "Staff Members", path: "/dashboard/serviceProvider/staff-members", icon: <FaUsers /> },
   { name: "Language", path: "/dashboard/serviceProvider/languages", icon: <FaLanguage /> },
   { name: "Logout", action: "logout", icon: <FaSignOutAlt /> }, 
 ];
@@ -694,7 +698,56 @@ export const VehicleOwnerOrdersData = [
       status: "Cancelled",
     },
   ];
-
+export const ServiceProviderBookingsData = [
+    {
+      id: '#BK202511',
+      serviceName: "Full Interior Revival",
+      orderId: "#ORD123",
+      date: "Aug 24, 2025",
+      amount: "$120",
+      status: "Pending",
+    },
+    {
+      id: '#BK202512',
+      serviceName: "Exterior Refresh",
+      orderId: "#ORD124",
+      date: "Aug 25, 2025",
+      amount: "$250",
+      status: "Completed",
+    },
+    {
+      id: '#BK202513',
+      serviceName: "Exterior Touch-Up",
+      orderId: "#ORD125",
+      date: "Aug 26, 2025",
+      amount: "$80",
+      status: "Processing",
+    },
+     {
+      id: '#BK202514',
+      serviceName: "Engine Overhaul",
+      orderId: "#ORD125",
+      date: "Aug 26, 2025",
+      amount: "$80",
+      status: "Cancelled",
+    },
+      {
+      id: '#BK202515',
+      serviceName: "Engine Overhaul",
+      orderId: "#ORD125",
+      date: "Aug 26, 2025",
+      amount: "$80",
+      status: "On-going",
+    },
+     {
+      id: '#BK202516',
+      serviceName: "Exterior Refresh",
+      orderId: "#ORD124",
+      date: "Aug 25, 2025",
+      amount: "$250",
+      status: "On-going",
+    },
+  ];
 export const VehicleOwnerBookingsData = [
   {
     id: 1,

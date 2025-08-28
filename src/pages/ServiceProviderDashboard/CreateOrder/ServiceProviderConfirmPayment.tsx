@@ -184,4 +184,5 @@ const CustomerInfo = () => {
     </div>
   );
 };
+
 export default ServiceProviderConfirmPayment

@@ -5,9 +5,12 @@ import Modal from '../../components/Modal';
 import { AppleIcon,  FacebookIconAuth, GoogleIcon } from '../../components/Icons';
 import { Link } from 'react-router';
 import TextInput from '../../components/TextInput';
+import { userTypeAtom } from '../../jotia/userAtom';
+import { useAtom } from 'jotai';
 const Signup = () => {
+  const [userType, setUserType]= useAtom(userTypeAtom)
 const [formData, setFormData] = useState({
-    userType: 'Personal Account',
+    userType: userType,
     fullName: '',
     email: '',
     mobile: '',
@@ -15,12 +18,12 @@ const [formData, setFormData] = useState({
     acceptTerms: false,
     getUpdates: false,
   });
-
   const [showPassword, setShowPassword] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
+    
     setFormData((prev) => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
@@ -28,9 +31,10 @@ const [formData, setFormData] = useState({
   };
 
   const handleUserTypeChange = (type: string) => {
+    setUserType(type)
     setFormData((prev) => ({ ...prev, userType: type }));
   };
-
+ 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setShowModal(true); 
@@ -63,20 +67,21 @@ const [formData, setFormData] = useState({
             <div>
               <label className="block text-sm font-semibold text-black mb-2">User Type</label>
               <div className="grid grid-cols-2 gap-2">
-                {['Personal Account', 'Business Account'].map((type) => (
-                  <button
-                    type="button"
-                    key={type}
-                    onClick={() => handleUserTypeChange(type)}
-                    className={`px-4 py-2 text-sm font-medium rounded-lg border ${
-                      formData.userType === type
-                        ? 'bg-primary text-white border-primary'
-                        : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
-                    }`}
-                  >
-                    {type}
-                  </button>
-                ))}
+               {['Personal', 'Business'].map((type) => (
+  <button
+    type="button"
+    key={type}
+    onClick={() => handleUserTypeChange(type)}
+    className={`px-4 py-2 text-sm font-medium rounded-lg border ${
+      userType === type
+        ? 'bg-primary text-white border-primary'
+        : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+    }`}
+  >
+    {type} Account
+  </button>
+))}
+
               </div>
             </div>
 
@@ -221,9 +226,9 @@ const [formData, setFormData] = useState({
       </div>
       <Modal
         show={showModal}
-        title={formData.userType === 'Personal Account' ? 'Add Vehicle' : 'Add Business details'}
+        title={formData.userType === 'Personal' ? 'Add Vehicle' : 'Add Business details'}
         onClose={() => setShowModal(false)}
-        link={formData.userType === 'Personal Account' ? "/vehicle-detail" :"/add-busniess-detail"}
+        link={formData.userType === 'Personal' ? "/vehicle-detail" :"/add-busniess-detail"}
       />
     </div>
   )

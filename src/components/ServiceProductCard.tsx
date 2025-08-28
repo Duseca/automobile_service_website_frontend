@@ -5,22 +5,23 @@ interface ProductCardProps {
     id: string;
     name: string;
     price: string;
-    image?: string;
-    imageAlt?: string;
   };
   isSelected: boolean;
   quantity: number;
   toggleSelection: (id: string) => void;
   updateQuantity: (id: string, change: number) => void;
+  insideProducts?: boolean;
+  onOpenModal?: (id: string) => void;
 }
 
-
-const ServiceProductCard: React.FC<ProductCardProps>= ({
+const ServiceProductCard: React.FC<ProductCardProps> = ({
   part,
   isSelected,
   quantity,
   toggleSelection,
   updateQuantity,
+  insideProducts = true,
+  onOpenModal,
 }) => {
   return (
     <div className="flex items-center space-x-3 border border-gray-200 rounded-2xl p-4 my-3">
@@ -55,27 +56,37 @@ const ServiceProductCard: React.FC<ProductCardProps>= ({
         <p className="text-primary font-semibold text-sm mt-1">{part.price}</p>
       </div>
 
-      {/* Quantity Controls */}
-      <div className="flex items-center bg-gray-100 rounded-lg">
+      {/* Conditional Controls */}
+      {insideProducts ? (
+        // 👉 Increment / Decrement controls
+        <div className="flex items-center bg-gray-100 rounded-lg">
+          <button
+            onClick={() => updateQuantity(part.id, -1)}
+            className="p-2 hover:bg-gray-200 rounded-l-lg transition-colors"
+            disabled={quantity === 0}
+          >
+            <DecrementIcon />
+          </button>
+          <span className="px-4 py-2 text-sm font-medium min-w-[40px] text-center">
+            {quantity}
+          </span>
+          <button
+            onClick={() => updateQuantity(part.id, 1)}
+            className="p-2 hover:bg-gray-200 rounded-r-lg transition-colors"
+          >
+            <IncrementIcon />
+          </button>
+        </div>
+      ) : (
         <button
-          onClick={() => updateQuantity(part.id, -1)}
-          className="p-2 hover:bg-gray-200 rounded-l-lg transition-colors"
-          disabled={quantity === 0}
+          onClick={() => onOpenModal?.(part.id)}
+          className="px-4 py-2 bg-[#F5F6F8] text-black rounded-lg cursor-pointer transition"
         >
-          <DecrementIcon />
+         Select Date/Time
         </button>
-        <span className="px-4 py-2 text-sm font-medium min-w-[40px] text-center">
-          {quantity}
-        </span>
-        <button
-          onClick={() => updateQuantity(part.id, 1)}
-          className="p-2 hover:bg-gray-200 rounded-r-lg transition-colors"
-        >
-          <IncrementIcon />
-        </button>
-      </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default ServiceProductCard

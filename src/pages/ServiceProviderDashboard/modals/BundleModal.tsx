@@ -125,6 +125,7 @@ const BundleModal = ({ onClose }: { onClose: () => void }) => {
               quantity={quantities[part.id] ?? 0}
               toggleSelection={toggleSelection}
               updateQuantity={updateQuantity}
+              insideProducts={true}
             />
           ))}
         <TextInput

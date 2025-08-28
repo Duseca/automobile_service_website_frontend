@@ -101,7 +101,9 @@ const ProductCarousel = ({
 
                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center gap-3 transition-opacity duration-300">
                         {onBuyNow && (
+                          <Link to={"/order"}>
                           <YellowButton text="Buy now" wFull={false}/>
+                          </Link>
                         )}
                         {onViewDetails && (
                           <Link

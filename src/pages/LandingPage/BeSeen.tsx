@@ -17,10 +17,9 @@ const BeSeen = () => {
         Be Seen. Be Found. Be on the Map
       </h2>
       <p className="text-gray mb-4 text-sm sm:text-base leading-relaxed mt-6 text-[#83898F]">
-        At VeFix, we help put your store on the map — literally and figuratively.
-        We understand that your success is built on the relationships you create
-        with your customers, and we’re here to help you strengthen and grow
-        those connections every step of the way.
+    Put your business on the map — literally.
+With VeFix, customers can discover your garage or service at the right time, in the right place.
+Your business deserves to be visible, trusted, and valued.
       </p>
 
       <p className="text-gray mb-6 text-sm sm:text-base leading-relaxed text-[#83898F]">

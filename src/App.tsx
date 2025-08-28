@@ -41,6 +41,9 @@ import ServiceProviderChangePassword from './pages/ServiceProviderDashboard/Serv
 import ServiceProviderSettings from './pages/ServiceProviderDashboard/ServiceProviderSettings'
 import ServiceProviderLanguage from './pages/ServiceProviderDashboard/ServiceProviderLanguage'
 import ServiceProviderStaffMembers from './pages/ServiceProviderDashboard/ServiceProviderStaffMembers'
+import ServiceProviderProducts from './pages/ServiceProviderDashboard/ServiceProviderProducts'
+import ServiceProviderBooking from './pages/ServiceProviderDashboard/Bookings/ServiceProviderBooking'
+import ServiceProviderCreateBooking from './pages/ServiceProviderDashboard/Bookings/ServiceProviderCreateBooking'
 function App() {
   return (
     <>
@@ -74,7 +77,13 @@ function App() {
     <Route index element={<ServiceProviderOrders />} />
     <Route path="create" element={<ServiceProviderCreateOrder />} />
   </Route>
+    <Route path="bookings">
+    <Route index element={<ServiceProviderBooking />} />
+    <Route path="create" element={<ServiceProviderCreateBooking />} />
+  </Route>
   <Route path="services" element={<ServiceProviderServices />} />
+
+  <Route path="my-products" element={<ServiceProviderProducts />} />
   <Route path="insights" element={<ServiceProviderInsights />} />
   <Route path="change-password" element={<ServiceProviderChangePassword />} />
   <Route path="settings" element={<ServiceProviderSettings />} />

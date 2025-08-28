@@ -5,7 +5,10 @@ import IconTwo from '../assets/tools.svg';
 import { BagIcon, MessageIcon } from './Icons';
 import Logo from '../assets/Logo.svg';
 import { useState } from 'react';
+import { useAtom } from 'jotai';
+import { userTypeAtom } from '../jotia/userAtom';
 const Header = () => {
+  const [userType] = useAtom(userTypeAtom)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
   { to: "/product-home", label: "Products", icon: IconOne },
@@ -19,7 +22,7 @@ const dummyUser = {
   messages: 5,
   type:"service-provider"
 }
-
+console.log(userType)
   return (
          <header className="w-full bg-white border-b border-gray-300">
       <div className="max-w-screen-xl1 mx-auto p-4 md:px-8 lg:px-8 xl1:px-[80px] px-4 py-3 flex items-center justify-between">
@@ -68,7 +71,7 @@ const dummyUser = {
                 </span>
               </Link>
 
-              <Link to="/dashboard/vehicleOwner">
+              <Link to={userType==='Personal' ? '/dashboard/vehicleOwner' : '/dashboard/serviceProvider'}>
                 <img
                   src={dummyUser.avatar || "https://images.pexels.com/photos/9072375/pexels-photo-9072375.jpeg"}
                   alt="User Avatar"

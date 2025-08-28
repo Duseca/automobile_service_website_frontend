@@ -83,14 +83,10 @@ const slides = [
 
           <div className="space-y-3 sm:space-y-4 text-black">
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-              With VeFix, customers can easily view your availability, schedule
-              appointments, and manage their bookings 24/7 — right from the
-              VeFix Web.
+            Customers can view availability, schedule appointments, and manage bookings anytime.
+You set your preferences — VeFix handles the rest, so you can focus on what you do best.
             </p>
-            <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-              Set your booking preferences, share your link, and let us handle
-              the rest while you focus on what you do best.
-            </p>
+           
           </div>
 
           

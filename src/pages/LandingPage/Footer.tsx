@@ -9,9 +9,12 @@ const Footer = () => {
     <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
       
       {/* Logo */}
-      <div className="flex-shrink-0">
+      <Link className="flex-shrink-0"
+      to={'/'}
+      onClick={()=>window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         <img src={Logo} alt="Logo" className="w-40 h-10 object-contain" />
-      </div>
+      </Link>
 
       <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-sm font-medium">
         <Link to="/" className="hover:underline">Home</Link>

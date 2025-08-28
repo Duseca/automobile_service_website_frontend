@@ -1,5 +1,5 @@
 
-import {  NavLink} from "react-router-dom";
+import {  NavLink, useLocation} from "react-router-dom";
 import { useState } from "react";
 import Modal from "../../components/Modal";
 interface SidebarProps {
@@ -101,22 +101,36 @@ interface SidebarLinkProps{
     icon: React.ReactNode,
     onClick: ()=>void
 }
-const SidebarLink: React.FC<SidebarLinkProps> = ({ name, path, icon, onClick }) =>{
-    return (
-      <li onClick={onClick}>
+const SidebarLink: React.FC<SidebarLinkProps> = ({ name, path, icon, onClick }) => {
+  const location = useLocation();
+
+  // custom active logic
+  const isActive = (): boolean => {
+    if (!path) return false;
+
+    // Exact match for Edit Profile pages
+    if (path.endsWith("serviceProvider") || path.endsWith("vehicleOwner")) {
+      return location.pathname === path;
+    }
+
+    // Parent tab active on nested pages
+    return location.pathname.startsWith(path);
+  };
+
+  return (
+    <li onClick={onClick}>
       <NavLink
-       
-        to={path? path : '/'}
-        className={({ isActive }) =>
-          isActive
-            ? "flex items-center py-2 px-5 rounded-lg text-primary bg-primary/10 font-semibold"
-            : "flex items-center py-2 px-5 text-[#83898F] rounded-lg bg-transparent hover:text-primary"
-        }
+        to={path ? path : "/"}
+        className={`flex items-center py-2 px-5 rounded-lg ${
+          isActive()
+            ? "text-primary bg-primary/10 font-semibold"
+            : "text-[#83898F] bg-transparent hover:text-primary"
+        }`}
       >
         <span className="text-inherit">{icon}</span>
         <span className="flex-1 ml-3 whitespace-nowrap">{name}</span>
       </NavLink>
     </li>
-    );
-  }
+  );
+};
 export default Sidebar
