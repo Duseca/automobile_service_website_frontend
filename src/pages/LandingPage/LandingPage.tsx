@@ -24,7 +24,7 @@ const LandingPage = () => {
        subtitle={"From oil changes to trusted mechanics and garages, VeFix makes it easy to find the right service — anytime, anywhere."}
   
         titleTwo={""}
-          title={"Auto Care Made Easy for Everyone"} />
+          title={"Auto Care, All in One Place"} />
           <div >
           <BeSeen />
           <ServicePlatform />
