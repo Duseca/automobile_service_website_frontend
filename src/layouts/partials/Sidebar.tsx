@@ -2,6 +2,7 @@
 import {  NavLink, useLocation} from "react-router-dom";
 import { useState } from "react";
 import Modal from "../../components/Modal";
+import { CrossIcon } from "../../components/Icons";
 interface SidebarProps {
   sidebarLinks: any[];
 }
@@ -52,7 +53,7 @@ const Sidebar = ({ sidebarLinks }:SidebarProps) => {
                 className="text-black text-2xl cursor-pointer"
                 onClick={() => setShowMenu(false)}
               >
-                close
+               <CrossIcon />
               </button>
             </div>
 
