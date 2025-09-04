@@ -16,21 +16,22 @@ const ServiceProviderOrders = () => {
   return (
     <div className="bg-white p-6 m-4 border rounded-xl border-gray-100">
       {/* Header */}
-      <div className="flex justify-between items-start mb-6">
-        <div>
-          <h1 className="text-2xl font-semibold text-black mb-2">Orders</h1>
-          <p className="text-[#83898F]">
-            Track all your past purchases — view details, check status, or reorder
-            with ease.
-          </p>
-        </div>
-        <Link to={"create"}>
-        <YellowButton 
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+  <div>
+    <h1 className="text-2xl font-semibold text-black mb-2">Orders</h1>
+    <p className="text-[#83898F]">
+      Track all your past purchases — view details, check status, or reorder
+      with ease.
+    </p>
+  </div>
+  <Link to={"create"} className="w-full md:w-auto">
+    <YellowButton 
       text="Create new Order" 
-      wFull={false} 
+      wFull={true}  // full width on mobile
     />
-        </Link>
-      </div>
+  </Link>
+</div>
+
     
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 mb-6">
